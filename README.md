@@ -2,7 +2,7 @@
 
 Offline regression tests for named, single-boarding GTFS journeys. Compare two local feed releases and ask whether the candidate still meets a timetable promise.
 
-**Alpha candidate 0.1.0a1.** Single boarding only. Multi-leg journeys were not evaluated. This is neither passenger navigation nor a full GTFS validator. The working package/repository name has not been cleared for public availability. This candidate has local verification only; no public release or hosted CI run has occurred.
+**Software-only source alpha 0.1.0a1.** Single boarding only. Multi-leg journeys were not evaluated. This is neither passenger navigation nor a full GTFS validator. The [published source snapshot](https://github.com/loaff123/JourneyDelta/commit/e9f643aedf4983baab685c9b297412fca56333c6) passed [hosted CI](https://github.com/loaff123/JourneyDelta/actions/runs/39043183802) on Python 3.11–3.14: 105 tests passed and six historical-data tests explicitly skipped per interpreter. No PyPI release has been made; package-index name availability and trademark clearance remain unverified.
 
 ## Install and run
 

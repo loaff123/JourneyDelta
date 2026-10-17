@@ -1,8 +1,8 @@
 # Verification record
 
-Local candidate verification on 17 October 2026. No public repository, push, or public release occurred. The alpha source candidate has local verification only. This report distinguishes completed checks from unavailable coverage.
+Local candidate verification and subsequent software-only GitHub publication on 17 October 2026. The [published alpha source snapshot](https://github.com/loaff123/JourneyDelta/commit/e9f643aedf4983baab685c9b297412fca56333c6) is available in [loaff123/JourneyDelta](https://github.com/loaff123/JourneyDelta). This report distinguishes local historical-data checks, completed hosted checks, and unavailable coverage. No PyPI release has been made.
 
-## Automated checks
+## Local automated checks
 
 - 111 tests passed in the local Python 3.12.14 development environment, including six installed-CLI historical integration tests.
 - Clean wheel installs on Python 3.11.17 and Python 3.14.8 each passed all 111 tests with source-path import override disabled (`-o pythonpath=.`). Each historical test invoked that environment's installed CLI.
@@ -19,6 +19,12 @@ python -m pip install -r requirements-lock.txt dist/journeydelta-0.1.0a1-py3-non
 JOURNEYDELTA_CALTRAIN_ROOT=/absolute/authorized/fixture-root \
   JOURNEYDELTA_CLI=/absolute/environment/bin/journeydelta python -m pytest -o pythonpath=. -q
 ```
+
+## Hosted CI for the published source snapshot
+
+[GitHub Actions run 39043183802](https://github.com/loaff123/JourneyDelta/actions/runs/39043183802) completed successfully for commit [`e9f643aedf4983baab685c9b297412fca56333c6`](https://github.com/loaff123/JourneyDelta/commit/e9f643aedf4983baab685c9b297412fca56333c6). All four Python 3.11, 3.12, 3.13, and 3.14 jobs passed. Each job built and installed a wheel, proved the import came from outside the checkout, and ran the copied tests in a separate temporary directory: **105 passed, 6 explicitly skipped**. The installed CLI inspection succeeded; the synthetic delayed-arrival comparison returned the expected exit 1, and its JSON report matched the checked-in example byte for byte.
+
+The workflow declares `contents: read`, and the hosted logs confirm read-only Contents and Metadata permissions. The public repository contains the reviewed software-only 67-file snapshot with original synthetic data and external-source notices. Historical third-party feed bytes, private development history, raw real-data reports, downloaded runtimes, and validator binaries were not published.
 
 ## Historical Caltrain result
 
@@ -42,10 +48,10 @@ The source distribution contains notice counts/codes and hashes, not historical 
 
 No claim of all valid GTFS compatibility, live service operation, transfer feasibility, end-to-end accessibility, street routing, realtime correctness, original historical official-ZIP authenticity, legal clearance, benchmark throughput, market demand, adoption, or novel routing science. A valid timetable can still violate a selected local promise.
 
-The CI workflow has not run on GitHub. It declares read-only repository permissions and builds a wheel, then copies tests, schemas, and synthetic examples to a separate temporary directory for installed-package tests and CLI smoke checks. These equivalent commands were exercised locally; hosted CI remains unverified. Historical tests skip explicitly when separately authorized fixture bytes are unavailable. Their local success cannot be inferred from source-only CI. Only the listed interpreter versions and operating environment were actually tested; other platforms have no verification claim.
+Hosted CI covers the software-only snapshot and original synthetic examples; its successful run is linked above. Historical tests skip explicitly when separately authorized fixture bytes are unavailable. Their local success cannot be inferred from source-only CI. Only the listed interpreter versions and operating environments were actually tested; other platforms have no verification claim.
 
 ## Explicit historical fixture opt-in and review boundaries
 
 Historical integration requires an explicit, nonempty `JOURNEYDELTA_CALTRAIN_ROOT` and both `caltrain-before` and `caltrain-after` directories. No adjacent directory is discovered automatically. Five configuration regressions cover unset, empty, missing, before-only, and complete configuration. Three initially failed against the previous behavior; all five passed after the change. With the environment variable unset, the full suite passed 105 tests and explicitly skipped six historical tests even though sibling research data was present.
 
-Legal clearance, package/repository name availability, benchmark performance, and original historical official-ZIP authenticity remain unverified and unclaimed. The checked-in design documents preserve their earlier design-stage status; this verification record describes the implemented local candidate.
+Legal clearance, package-index name availability, trademark clearance, benchmark performance, and original historical official-ZIP authenticity remain unverified and unclaimed. The checked-in design documents preserve their earlier design-stage status; this verification record describes the implemented alpha and exact published source snapshot linked above.
