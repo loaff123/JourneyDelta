@@ -1,0 +1,456 @@
+{
+  "repository": "davidyen1124/caltrain-mcp",
+  "path_prefix": "src/caltrain_mcp/data/caltrain-ca-us/",
+  "before_commit": "199366246aa54f38e806ba768c9eb1a69736edb2",
+  "after_commit": "6cdd8aa09efc98f9cfae519e3b0118a7941dde7c",
+  "files": [
+    {
+      "side": "before",
+      "file": "agency.txt",
+      "bytes": 212,
+      "git_blob_sha": "bcce5f1f20036d14cf56f4eb48e8c7f180b72e1f",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/agency.txt",
+      "sha256": "5e92156d783d75fbaaf35c32ebc120cec4f1866c564fdf7fee05201bcbb77b1e"
+    },
+    {
+      "side": "before",
+      "file": "areas.txt",
+      "bytes": 12,
+      "git_blob_sha": "cac45c7d043f9d833ab9125aa0d621c6cd018b1b",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/areas.txt",
+      "sha256": "9bf5094afcfdbd0c147fd2236cf0af01a6090511915c6330fea218e4c5eaf0c2"
+    },
+    {
+      "side": "before",
+      "file": "booking_rules.txt",
+      "bytes": 271,
+      "git_blob_sha": "c2a25eb912306712d5a9804c4f4dfc995ee51794",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/booking_rules.txt",
+      "sha256": "771e7f202037c8beb602fcfe5296fb7b49c3e06ecb2f6fa6d6d0ce4b4a6ae7ee"
+    },
+    {
+      "side": "before",
+      "file": "calendar.txt",
+      "bytes": 287,
+      "git_blob_sha": "f546c5912037fa36dd15bbcd04172eeeccc71025",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/calendar.txt",
+      "sha256": "cf489e6d89370e7ec445035e6104f0284b90e36d919567bfb6a7c00154b04336"
+    },
+    {
+      "side": "before",
+      "file": "calendar_attributes.txt",
+      "bytes": 153,
+      "git_blob_sha": "a6295356f65cd4bc4ae1bc96fab810839b63f77d",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/calendar_attributes.txt",
+      "sha256": "5fa2e60615527a942f82c442f7d01120220398f6020a75ce4ca82411d701c56e"
+    },
+    {
+      "side": "before",
+      "file": "calendar_dates.txt",
+      "bytes": 228,
+      "git_blob_sha": "d80da918b22056d17ec9bce98876e9822a4fece2",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/calendar_dates.txt",
+      "sha256": "b4f38a998e6ed378fbff5a9b8bd1a0ec0f911a44086f29b33bca89246bc51ca3"
+    },
+    {
+      "side": "before",
+      "file": "directions.txt",
+      "bytes": 172,
+      "git_blob_sha": "0a6eb423d26c99ad4d54afec4afe04e49c515243",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/directions.txt",
+      "sha256": "71be7915383336c7e1bd91c4d6152104079072b43c9f122afb82b0383c38e439"
+    },
+    {
+      "side": "before",
+      "file": "fare_attributes.txt",
+      "bytes": 252,
+      "git_blob_sha": "e672dcb88194f7c09f880d95c43387d717d377bc",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/fare_attributes.txt",
+      "sha256": "9293454fb35d2b0f0dc6201462be9069b1391767dd18b441d193586bd5940429"
+    },
+    {
+      "side": "before",
+      "file": "fare_rider_categories.txt",
+      "bytes": 277,
+      "git_blob_sha": "d669ddea5eb309186825d132ff4b37686a6135bd",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/fare_rider_categories.txt",
+      "sha256": "fdcc04c147cba78d686809194ff5d0b81709449ff7d7fce3baa7202e21c0c9f8"
+    },
+    {
+      "side": "before",
+      "file": "fare_rules.txt",
+      "bytes": 666,
+      "git_blob_sha": "f5db940dfcc7c5f6172ae9b18211ff480e89d204",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/fare_rules.txt",
+      "sha256": "ec10bd48fc5a339b35469039fb5cd05b3ddf755181e5b0c7541fe18c1a72b56c"
+    },
+    {
+      "side": "before",
+      "file": "farezone_attributes.txt",
+      "bytes": 219,
+      "git_blob_sha": "109db282c45c7f721a47c4dba94ce758a08edb99",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/farezone_attributes.txt",
+      "sha256": "777518d50e361b10540c0c4ee0ae52ad0d95e711976c2311bda49b6a443f158a"
+    },
+    {
+      "side": "before",
+      "file": "feed_info.txt",
+      "bytes": 350,
+      "git_blob_sha": "221a76c8e6902a355d951a43cc07ac6d1e95cb5e",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/feed_info.txt",
+      "sha256": "7214550a85c7f583691680c151f94c1839301e2246de5fc44d1ebb9cd2d28dc1"
+    },
+    {
+      "side": "before",
+      "file": "frequencies.txt",
+      "bytes": 54,
+      "git_blob_sha": "4ed4872a3dcd647cde848f647111641913db2de7",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/frequencies.txt",
+      "sha256": "c2d82ba6754630aa069edbeec90895ec2707726155e5e8687c1687721850679c"
+    },
+    {
+      "side": "before",
+      "file": "linked_datasets.txt",
+      "bytes": 237,
+      "git_blob_sha": "5ab854d290c3116792d9b9e68834439d1b65b4b0",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/linked_datasets.txt",
+      "sha256": "5fa0faf8e0026b57d892391d7d25314274cc6940efb8b4f4579821db597b02a4"
+    },
+    {
+      "side": "before",
+      "file": "location_groups.txt",
+      "bytes": 50,
+      "git_blob_sha": "45845294fa8b050f4305600acf9ff374920d49d8",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/location_groups.txt",
+      "sha256": "f0555a180df24fa53f4bd4dd957689f31b9808c11418d4aee79fbdb88acca6cb"
+    },
+    {
+      "side": "before",
+      "file": "realtime_routes.txt",
+      "bytes": 169,
+      "git_blob_sha": "d320d7530a035b94c6426d680c81cbac4dcc4c5a",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/realtime_routes.txt",
+      "sha256": "b6a80a3ef518cacb0efb0782901be067ccbeff0b8c2f89d838a9aedaba377e03"
+    },
+    {
+      "side": "before",
+      "file": "rider_categories.txt",
+      "bytes": 190,
+      "git_blob_sha": "b1cea8364d0e8ca9d5c7a9596a3c4c526bab3934",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/rider_categories.txt",
+      "sha256": "a5368cf9adafa66c15077d2d8e476acf5e3ac2ad2ad61339f9bef5185e78e642"
+    },
+    {
+      "side": "before",
+      "file": "route_attributes.txt",
+      "bytes": 112,
+      "git_blob_sha": "9c3531ff4af8ae26baddeb1a6afc00132c913a2c",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/route_attributes.txt",
+      "sha256": "d2dbfa3d7f014340cc5c68d2172baed936bc591e0c218ce5d944232c1c2b1e1d"
+    },
+    {
+      "side": "before",
+      "file": "routes.txt",
+      "bytes": 548,
+      "git_blob_sha": "5034e7cc4806c2bb68190452abc202d9984969a6",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/routes.txt",
+      "sha256": "e2399edf435031970eff7f6a3f6a70e56e4709cf766afa73b73adbeed9ef9621"
+    },
+    {
+      "side": "before",
+      "file": "runcut.txt",
+      "bytes": 105,
+      "git_blob_sha": "90be8f780c8ece0695fbc37c5de8732d1b9de2c6",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/runcut.txt",
+      "sha256": "0027ea747577c245eac2ef68492d873ef1db3db10d7031c5cedb17e11d576a8b"
+    },
+    {
+      "side": "before",
+      "file": "shapes.txt",
+      "bytes": 379948,
+      "git_blob_sha": "8ae72195f4e3c0a27e1e45994633e08816b5caa9",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/shapes.txt",
+      "sha256": "5fe2b6cf137eb89c5b58ce4eb7077c8fdb27cddb7c95fd0333d3287db68a7c8e"
+    },
+    {
+      "side": "before",
+      "file": "stop_attributes.txt",
+      "bytes": 1569,
+      "git_blob_sha": "f29fec72723ca40773112b62bd6b7154a020c1c5",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/stop_attributes.txt",
+      "sha256": "ebd0366f2fabbf2f50210a766d82fb4d8211b508b5ee3d3acacd900c3f0f9274"
+    },
+    {
+      "side": "before",
+      "file": "stop_times.txt",
+      "bytes": 409168,
+      "git_blob_sha": "f24352450c59716b03dec922820e45cccf0e174b",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/stop_times.txt",
+      "sha256": "f472b7e265f9f8a6723eb6d18320a19b22bde6c7492a03c76d27479282cb35fd"
+    },
+    {
+      "side": "before",
+      "file": "stops.txt",
+      "bytes": 10717,
+      "git_blob_sha": "5ad1c08e5395bf426e988e16d883c32ce7895e21",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/stops.txt",
+      "sha256": "d280e2f62d9003fe937047c3bb5f7a866d59e26654ead0769d94042f06ec30fe"
+    },
+    {
+      "side": "before",
+      "file": "timetable_stop_order.txt",
+      "bytes": 62,
+      "git_blob_sha": "42c0a7ce57e7f85f9bf347e18ac85e64befaf900",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/timetable_stop_order.txt",
+      "sha256": "6df10c404b0ea737b9fa72b4b989e69056a7519525ed830b533aacbe00e18ef5"
+    },
+    {
+      "side": "before",
+      "file": "timetables.txt",
+      "bytes": 170,
+      "git_blob_sha": "e626abc574d09c800c3bd6ced8383282bb697737",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/timetables.txt",
+      "sha256": "93d3774c2f58c7c4aa11ecf2d0f97b83d883bc41902fc21095074f1af3ac4339"
+    },
+    {
+      "side": "before",
+      "file": "transfers.txt",
+      "bytes": 86,
+      "git_blob_sha": "99441394824dd3feb6bb5191672296ea0589c302",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/transfers.txt",
+      "sha256": "472d5bcf2439b1f928c8900d4295c2a4ab2a76c205a48294b5f13ef3d3c2a4c4"
+    },
+    {
+      "side": "before",
+      "file": "trips.txt",
+      "bytes": 19905,
+      "git_blob_sha": "f5178e811b522e0d255fd1df1ff63af2152b89ae",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/199366246aa54f38e806ba768c9eb1a69736edb2/src/caltrain_mcp/data/caltrain-ca-us/trips.txt",
+      "sha256": "2ad5df19b0b615abac55c57203945fb70f35fad2d6bdab6c4c2a5074655878d2"
+    },
+    {
+      "side": "after",
+      "file": "agency.txt",
+      "bytes": 212,
+      "git_blob_sha": "bcce5f1f20036d14cf56f4eb48e8c7f180b72e1f",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/agency.txt",
+      "sha256": "5e92156d783d75fbaaf35c32ebc120cec4f1866c564fdf7fee05201bcbb77b1e"
+    },
+    {
+      "side": "after",
+      "file": "areas.txt",
+      "bytes": 12,
+      "git_blob_sha": "cac45c7d043f9d833ab9125aa0d621c6cd018b1b",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/areas.txt",
+      "sha256": "9bf5094afcfdbd0c147fd2236cf0af01a6090511915c6330fea218e4c5eaf0c2"
+    },
+    {
+      "side": "after",
+      "file": "booking_rules.txt",
+      "bytes": 271,
+      "git_blob_sha": "c2a25eb912306712d5a9804c4f4dfc995ee51794",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/booking_rules.txt",
+      "sha256": "771e7f202037c8beb602fcfe5296fb7b49c3e06ecb2f6fa6d6d0ce4b4a6ae7ee"
+    },
+    {
+      "side": "after",
+      "file": "calendar.txt",
+      "bytes": 287,
+      "git_blob_sha": "550721ced7eaf03faabe6b873109262cfd31a262",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/calendar.txt",
+      "sha256": "211baa26f2da2d98cae88f948f7efe84bb208fe2bd109e6127beec0375826a91"
+    },
+    {
+      "side": "after",
+      "file": "calendar_attributes.txt",
+      "bytes": 153,
+      "git_blob_sha": "a6295356f65cd4bc4ae1bc96fab810839b63f77d",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/calendar_attributes.txt",
+      "sha256": "5fa2e60615527a942f82c442f7d01120220398f6020a75ce4ca82411d701c56e"
+    },
+    {
+      "side": "after",
+      "file": "calendar_dates.txt",
+      "bytes": 1261,
+      "git_blob_sha": "7d66f7150baecaff3b8596dd8aebeac7ce6e7eb9",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/calendar_dates.txt",
+      "sha256": "35c08b681e4798850c769969f9bc91fb5ef01b750926f8c2a113c33e4ce73759"
+    },
+    {
+      "side": "after",
+      "file": "directions.txt",
+      "bytes": 172,
+      "git_blob_sha": "0a6eb423d26c99ad4d54afec4afe04e49c515243",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/directions.txt",
+      "sha256": "71be7915383336c7e1bd91c4d6152104079072b43c9f122afb82b0383c38e439"
+    },
+    {
+      "side": "after",
+      "file": "fare_attributes.txt",
+      "bytes": 252,
+      "git_blob_sha": "e672dcb88194f7c09f880d95c43387d717d377bc",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/fare_attributes.txt",
+      "sha256": "9293454fb35d2b0f0dc6201462be9069b1391767dd18b441d193586bd5940429"
+    },
+    {
+      "side": "after",
+      "file": "fare_rider_categories.txt",
+      "bytes": 277,
+      "git_blob_sha": "d669ddea5eb309186825d132ff4b37686a6135bd",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/fare_rider_categories.txt",
+      "sha256": "fdcc04c147cba78d686809194ff5d0b81709449ff7d7fce3baa7202e21c0c9f8"
+    },
+    {
+      "side": "after",
+      "file": "fare_rules.txt",
+      "bytes": 666,
+      "git_blob_sha": "f5db940dfcc7c5f6172ae9b18211ff480e89d204",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/fare_rules.txt",
+      "sha256": "ec10bd48fc5a339b35469039fb5cd05b3ddf755181e5b0c7541fe18c1a72b56c"
+    },
+    {
+      "side": "after",
+      "file": "farezone_attributes.txt",
+      "bytes": 219,
+      "git_blob_sha": "109db282c45c7f721a47c4dba94ce758a08edb99",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/farezone_attributes.txt",
+      "sha256": "777518d50e361b10540c0c4ee0ae52ad0d95e711976c2311bda49b6a443f158a"
+    },
+    {
+      "side": "after",
+      "file": "feed_info.txt",
+      "bytes": 345,
+      "git_blob_sha": "3eb34d9e2d9a4b715d2a941bab20064d3869797f",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/feed_info.txt",
+      "sha256": "448230e2edd37a28053b758186797ef8dc6c2910e7b1a06f73ad1ca066f610c9"
+    },
+    {
+      "side": "after",
+      "file": "frequencies.txt",
+      "bytes": 54,
+      "git_blob_sha": "4ed4872a3dcd647cde848f647111641913db2de7",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/frequencies.txt",
+      "sha256": "c2d82ba6754630aa069edbeec90895ec2707726155e5e8687c1687721850679c"
+    },
+    {
+      "side": "after",
+      "file": "linked_datasets.txt",
+      "bytes": 237,
+      "git_blob_sha": "5ab854d290c3116792d9b9e68834439d1b65b4b0",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/linked_datasets.txt",
+      "sha256": "5fa0faf8e0026b57d892391d7d25314274cc6940efb8b4f4579821db597b02a4"
+    },
+    {
+      "side": "after",
+      "file": "location_groups.txt",
+      "bytes": 50,
+      "git_blob_sha": "45845294fa8b050f4305600acf9ff374920d49d8",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/location_groups.txt",
+      "sha256": "f0555a180df24fa53f4bd4dd957689f31b9808c11418d4aee79fbdb88acca6cb"
+    },
+    {
+      "side": "after",
+      "file": "realtime_routes.txt",
+      "bytes": 169,
+      "git_blob_sha": "d320d7530a035b94c6426d680c81cbac4dcc4c5a",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/realtime_routes.txt",
+      "sha256": "b6a80a3ef518cacb0efb0782901be067ccbeff0b8c2f89d838a9aedaba377e03"
+    },
+    {
+      "side": "after",
+      "file": "rider_categories.txt",
+      "bytes": 190,
+      "git_blob_sha": "b1cea8364d0e8ca9d5c7a9596a3c4c526bab3934",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/rider_categories.txt",
+      "sha256": "a5368cf9adafa66c15077d2d8e476acf5e3ac2ad2ad61339f9bef5185e78e642"
+    },
+    {
+      "side": "after",
+      "file": "route_attributes.txt",
+      "bytes": 112,
+      "git_blob_sha": "9c3531ff4af8ae26baddeb1a6afc00132c913a2c",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/route_attributes.txt",
+      "sha256": "d2dbfa3d7f014340cc5c68d2172baed936bc591e0c218ce5d944232c1c2b1e1d"
+    },
+    {
+      "side": "after",
+      "file": "routes.txt",
+      "bytes": 548,
+      "git_blob_sha": "5034e7cc4806c2bb68190452abc202d9984969a6",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/routes.txt",
+      "sha256": "e2399edf435031970eff7f6a3f6a70e56e4709cf766afa73b73adbeed9ef9621"
+    },
+    {
+      "side": "after",
+      "file": "runcut.txt",
+      "bytes": 105,
+      "git_blob_sha": "90be8f780c8ece0695fbc37c5de8732d1b9de2c6",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/runcut.txt",
+      "sha256": "0027ea747577c245eac2ef68492d873ef1db3db10d7031c5cedb17e11d576a8b"
+    },
+    {
+      "side": "after",
+      "file": "shapes.txt",
+      "bytes": 397508,
+      "git_blob_sha": "a4f70abc0d838d90a8e5de59f754eae03abcfdfe",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/shapes.txt",
+      "sha256": "a171c94663555c16e6ed91e145a1a50ea9f3b904edf9c4caab73b3a89240de15"
+    },
+    {
+      "side": "after",
+      "file": "stop_attributes.txt",
+      "bytes": 1569,
+      "git_blob_sha": "f29fec72723ca40773112b62bd6b7154a020c1c5",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/stop_attributes.txt",
+      "sha256": "ebd0366f2fabbf2f50210a766d82fb4d8211b508b5ee3d3acacd900c3f0f9274"
+    },
+    {
+      "side": "after",
+      "file": "stop_times.txt",
+      "bytes": 413212,
+      "git_blob_sha": "f991f5bfb909a2508ffa05c14709f7039866e458",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/stop_times.txt",
+      "sha256": "b8d3c1978bd2aaf9c1ba4ad17f41ae71612fa2bb672772e869a63c47e109fef5"
+    },
+    {
+      "side": "after",
+      "file": "stops.txt",
+      "bytes": 10717,
+      "git_blob_sha": "5ad1c08e5395bf426e988e16d883c32ce7895e21",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/stops.txt",
+      "sha256": "d280e2f62d9003fe937047c3bb5f7a866d59e26654ead0769d94042f06ec30fe"
+    },
+    {
+      "side": "after",
+      "file": "timetable_stop_order.txt",
+      "bytes": 62,
+      "git_blob_sha": "42c0a7ce57e7f85f9bf347e18ac85e64befaf900",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/timetable_stop_order.txt",
+      "sha256": "6df10c404b0ea737b9fa72b4b989e69056a7519525ed830b533aacbe00e18ef5"
+    },
+    {
+      "side": "after",
+      "file": "timetables.txt",
+      "bytes": 170,
+      "git_blob_sha": "e626abc574d09c800c3bd6ced8383282bb697737",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/timetables.txt",
+      "sha256": "93d3774c2f58c7c4aa11ecf2d0f97b83d883bc41902fc21095074f1af3ac4339"
+    },
+    {
+      "side": "after",
+      "file": "transfers.txt",
+      "bytes": 86,
+      "git_blob_sha": "99441394824dd3feb6bb5191672296ea0589c302",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/transfers.txt",
+      "sha256": "472d5bcf2439b1f928c8900d4295c2a4ab2a76c205a48294b5f13ef3d3c2a4c4"
+    },
+    {
+      "side": "after",
+      "file": "trips.txt",
+      "bytes": 20391,
+      "git_blob_sha": "5b312d98926095b06079358a592c0a9ddb2579f7",
+      "url": "https://github.com/davidyen1124/caltrain-mcp/blob/6cdd8aa09efc98f9cfae519e3b0118a7941dde7c/src/caltrain_mcp/data/caltrain-ca-us/trips.txt",
+      "sha256": "302f9e5791a52af6bac11a6e94e0db124ba6d62866798a62e000d019b4ef3033"
+    }
+  ]
+}

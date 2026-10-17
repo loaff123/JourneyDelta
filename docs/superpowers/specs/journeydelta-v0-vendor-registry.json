@@ -1,0 +1,203 @@
+{
+  "registry_version": "trillium-reviewed-v1",
+  "status": "design specification, not implementation",
+  "reviewed_source": "https://trilliumtransit.com/gtfs/reference/",
+  "vendor_tables": {
+    "calendar_attributes.txt": {
+      "disposition": "disclosed_metadata",
+      "columns": [
+        "service_id",
+        "service_description"
+      ],
+      "purpose": "Service labels; no activation changes."
+    },
+    "directions.txt": {
+      "disposition": "disclosed_metadata",
+      "columns": [
+        "route_id",
+        "direction_id",
+        "direction"
+      ],
+      "purpose": "Direction labels; no travel edges."
+    },
+    "farezone_attributes.txt": {
+      "disposition": "disclosed_metadata",
+      "columns": [
+        "zone_id",
+        "zone_name"
+      ],
+      "purpose": "Fare-zone labels; fare calculations not evaluated."
+    },
+    "fare_rider_categories.txt": {
+      "disposition": "disclosed_metadata",
+      "columns": [
+        "fare_id",
+        "rider_category_id",
+        "price"
+      ],
+      "purpose": "Fare information; price and rider-category selection not evaluated."
+    },
+    "realtime_routes.txt": {
+      "disposition": "disclosed_metadata",
+      "columns": [
+        "route_id",
+        "realtime_enabled",
+        "realtime_routename",
+        "realtime_routecode"
+      ],
+      "purpose": "Realtime labels; no realtime data is fetched."
+    },
+    "route_attributes.txt": {
+      "disposition": "disclosed_metadata",
+      "columns": [
+        "route_id",
+        "category",
+        "subcategory",
+        "running_way"
+      ],
+      "purpose": "Service classification and right-of-way metadata; no timetable changes."
+    },
+    "stop_attributes.txt": {
+      "disposition": "disclosed_metadata",
+      "columns": [
+        "stop_id",
+        "accessibility_id",
+        "cardinal_direction",
+        "relative_position",
+        "stop_city"
+      ],
+      "purpose": "Stop descriptors and namespaced legacy accessibility declarations; no accessible-path guarantee."
+    },
+    "linked_datasets.txt": {
+      "disposition": "disclosed_metadata",
+      "columns": [
+        "url",
+        "trip_updates",
+        "vehicle_positions",
+        "service_alerts",
+        "authentication_type",
+        "authentication_info_url",
+        "api_key_parameter_name"
+      ],
+      "purpose": "Link descriptors only; URLs never fetched."
+    }
+  },
+  "empty_only_schemas": {
+    "areas.txt": {
+      "columns": [
+        "area_id",
+        "wkt"
+      ],
+      "disposition": "require_zero_records"
+    },
+    "booking_rules.txt": {
+      "columns": [
+        "booking_rule_id",
+        "booking_type",
+        "prior_notice_duration_min",
+        "prior_notice_duration_max",
+        "prior_notice_start_day",
+        "prior_notice_start_time",
+        "prior_notice_last_day",
+        "prior_notice_last_time",
+        "prior_notice_service_id",
+        "message",
+        "pickup_message",
+        "drop_off_message",
+        "phone_number",
+        "info_url",
+        "booking_url"
+      ],
+      "disposition": "require_zero_records"
+    },
+    "location_groups.txt": {
+      "columns": [
+        "location_group_id",
+        "location_id",
+        "location_group_name"
+      ],
+      "disposition": "require_zero_records"
+    },
+    "runcut.txt": {
+      "columns": [
+        "runs_id",
+        "service_id",
+        "block_id",
+        "run_number",
+        "piece_number",
+        "start_trip_id",
+        "start_stop_id",
+        "end_trip_id",
+        "end_stop_id"
+      ],
+      "disposition": "require_zero_records"
+    },
+    "timetable_stop_order.txt": {
+      "columns": [
+        "timetable_id",
+        "stop_id",
+        "stop_sequence",
+        "stop_name",
+        "connected_routes"
+      ],
+      "disposition": "require_zero_records"
+    },
+    "timetables.txt": {
+      "columns": [
+        "timetable_id",
+        "route_id",
+        "direction_id",
+        "start_date",
+        "end_date",
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday",
+        "timetable_label",
+        "service_notes",
+        "direction_label",
+        "orientation"
+      ],
+      "disposition": "require_zero_records"
+    }
+  },
+  "core_field_extensions": {
+    "calendar.txt": {
+      "service_name": "display_label"
+    },
+    "calendar_dates.txt": {
+      "holiday_name": "display_label"
+    },
+    "feed_info.txt": {
+      "feed_id": "display_identifier",
+      "feed_license": "display_rights_metadata"
+    },
+    "routes.txt": {
+      "eligibility_restricted": {
+        "allowed_values": [
+          "",
+          "0"
+        ],
+        "disposition": "unrestricted_general_public",
+        "reject_values": [
+          "1",
+          "2"
+        ],
+        "definition": "https://github.com/MobilityData/gtfs-flex/blob/2dd3802f6a4219a074153692bebb55625c5d8de6/spec/reference.md#L95-L101"
+      }
+    },
+    "rider_categories.txt": {
+      "rider_category_description": "display_fare_metadata"
+    }
+  },
+  "field_policy": "Unlisted nonempty columns block, including within known vendor tables. Unlisted all-empty columns receive ignored_empty_column warning. Unknown table names block even if empty. No arbitrary user ignore list.",
+  "sources": [
+    "https://trilliumtransit.com/gtfs/reference/",
+    "https://github.com/MobilityData/gtfs-flex/blob/2dd3802f6a4219a074153692bebb55625c5d8de6/spec/reference.md#L95-L101",
+    "https://511.org/sites/default/files/pdfs/511-SF-Bay-Open-Data-Specification-Transit_1.pdf#page=115",
+    "https://www.transitwiki.org/TransitWiki/images/e/e7/GTFS%2B_Additional_Files_Format_Ver_1.7.pdf#page=7"
+  ]
+}

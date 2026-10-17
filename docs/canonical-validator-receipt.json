@@ -1,0 +1,494 @@
+{
+  "purpose": "Separate local Canonical GTFS Validator evidence; not JourneyDelta route-result validation.",
+  "workdir": "<PROJECT_ROOT>",
+  "validator": {
+    "version": "7.1.0",
+    "official_release_url": "https://github.com/MobilityData/gtfs-validator/releases/tag/v7.1.0",
+    "release_api_url": "https://api.github.com/repos/MobilityData/gtfs-validator/releases/tags/v7.1.0",
+    "artifact_url": "https://github.com/MobilityData/gtfs-validator/releases/download/v7.1.0/gtfs-validator-7.1.0-cli.jar",
+    "artifact_bytes": 39856460,
+    "artifact_sha256": "52c2785089aaf04e7ba1bb11b2db215692e2622eb0e196b823c194d156d9b58c",
+    "upstream_asset_digest": null,
+    "provenance_limit": "SHA-256 is the downloaded artifact hash; GitHub release metadata supplied no publisher digest for this asset. Version pin is deliberate and is not asserted to be latest.",
+    "documentation_url": "https://github.com/MobilityData/gtfs-validator/blob/v7.1.0/docs/USAGE.md"
+  },
+  "java_version": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-deb13u1-Debian)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-deb13u1-Debian, mixed mode, sharing)",
+  "synthetic_generation": {
+    "source": "tests.support.zip_bytes(tests.support.minimal_feed())",
+    "source_file_sha256": "01fcf6547b60db86a8d3701e6fa9c783e572070256a0a1b38c211350648abf3d",
+    "overrides": null
+  },
+  "caltrain_generation": {
+    "source_directories": [
+      "<AUTHORIZED_CALTRAIN_FIXTURE_ROOT>/caltrain-before",
+      "<AUTHORIZED_CALTRAIN_FIXTURE_ROOT>/caltrain-after"
+    ],
+    "method": "Read each existing regular file as bytes without modification and repackage using tests.support.zip_bytes; fixed ZIP entry timestamps and sorted file names.",
+    "members_per_archive": {
+      "before": 28,
+      "after": 28
+    },
+    "source_files_unchanged_after_validation": true,
+    "manifest_file": "validation/canonical-validator/caltrain-input-manifests.json",
+    "rights": "Local inspection only. No third-party feed or reports were published or uploaded; redistribution rights were not assessed."
+  },
+  "runs": {
+    "synthetic-minimal": {
+      "input_file": "validation/canonical-validator/synthetic-minimal-feed.zip",
+      "input_sha256": "d261fd389ed31350e6cfc640c8791a89c5fad252068b8914b2f5a2f84c2eae75",
+      "command": [
+        "java",
+        "-Djava.io.tmpdir=<VALIDATOR_TEMP_DIR>",
+        "-jar",
+        "validation/canonical-validator/gtfs-validator-7.1.0-cli.jar",
+        "-i",
+        "validation/canonical-validator/synthetic-minimal-feed.zip",
+        "-o",
+        "validation/canonical-validator/synthetic-minimal-report",
+        "-d",
+        "2026-06-17",
+        "-t",
+        "1",
+        "-svu",
+        "-p"
+      ],
+      "exit_code": 0,
+      "validator_version": "7.1.0",
+      "validated_at": "2026-10-18T01:21:04+11:00",
+      "date_for_validation": "2026-06-17",
+      "report_file": "validation/canonical-validator/synthetic-minimal-report/report.json",
+      "report_sha256": "894514011e3ee5957a4e4afe9748731d9644878f21c0a3f93cb79ba990baea66",
+      "notice_occurrence_counts": {
+        "ERROR": 1,
+        "WARNING": 3,
+        "INFO": 0
+      },
+      "notices": [
+        {
+          "code": "missing_feed_contact_email_and_url",
+          "severity": "WARNING",
+          "totalNotices": 1,
+          "sampleNotices": [
+            {
+              "csvRowNumber": 2
+            }
+          ]
+        },
+        {
+          "code": "missing_recommended_field",
+          "severity": "WARNING",
+          "totalNotices": 1,
+          "sampleNotices": [
+            {
+              "filename": "feed_info.txt",
+              "csvRowNumber": 2,
+              "fieldName": "feed_version"
+            }
+          ]
+        },
+        {
+          "code": "point_near_origin",
+          "severity": "ERROR",
+          "totalNotices": 1,
+          "sampleNotices": [
+            {
+              "filename": "stops.txt",
+              "csvRowNumber": 2,
+              "entityId": "A",
+              "latFieldName": "stop_lat",
+              "latFieldValue": 1.0,
+              "lonFieldName": "stop_lon",
+              "lonFieldValue": 1.0
+            }
+          ]
+        },
+        {
+          "code": "stop_without_stop_time",
+          "severity": "WARNING",
+          "totalNotices": 1,
+          "sampleNotices": [
+            {
+              "csvRowNumber": 4,
+              "stopId": "P",
+              "stopName": "Mid"
+            }
+          ]
+        }
+      ],
+      "system_errors": [],
+      "skipped_validator_count": 51,
+      "skipped_validators": [
+        "PickupDropOffTypeValidator",
+        "PickupDropOffWindowValidator",
+        "StopTimesShapeDistTraveledPresenceValidator",
+        "StopTimeIncreasingDistanceValidator",
+        "StopTimesRecordValidator",
+        "GtfsTripMixedCaseValidator",
+        "ContinuousPickupDropOffValidator",
+        "FareProductDefaultRiderCategoriesValidator",
+        "GtfsAttributionAgencyIdForeignKeyValidator",
+        "GtfsAttributionRouteIdForeignKeyValidator",
+        "GtfsAttributionTripIdForeignKeyValidator",
+        "GtfsFareAttributeAgencyIdForeignKeyValidator",
+        "GtfsFareLegJoinRuleFromStopIdForeignKeyValidator",
+        "GtfsFareLegJoinRuleToStopIdForeignKeyValidator",
+        "GtfsFareLegRuleFareProductIdForeignKeyValidator",
+        "GtfsFareLegRuleFromAreaIdForeignKeyValidator",
+        "GtfsFareLegRuleFromTimeframeGroupIdForeignKeyValidator",
+        "GtfsFareLegRuleToAreaIdForeignKeyValidator",
+        "GtfsFareLegRuleToTimeframeGroupIdForeignKeyValidator",
+        "GtfsFareProductFareMediaIdForeignKeyValidator",
+        "GtfsFareProductRiderCategoryIdForeignKeyValidator",
+        "GtfsFareRuleContainsIdForeignKeyValidator",
+        "GtfsFareRuleDestinationIdForeignKeyValidator",
+        "GtfsFareRuleFareIdForeignKeyValidator",
+        "GtfsFareRuleOriginIdForeignKeyValidator",
+        "GtfsFareRuleRouteIdForeignKeyValidator",
+        "GtfsFareTransferRuleFareProductIdForeignKeyValidator",
+        "GtfsFareTransferRuleFromLegGroupIdForeignKeyValidator",
+        "GtfsFareTransferRuleToLegGroupIdForeignKeyValidator",
+        "GtfsFrequencyTripIdForeignKeyValidator",
+        "GtfsPathwayFromStopIdForeignKeyValidator",
+        "GtfsPathwayToStopIdForeignKeyValidator",
+        "GtfsRouteNetworkNetworkIdForeignKeyValidator",
+        "GtfsRouteNetworkRouteIdForeignKeyValidator",
+        "GtfsStopAreaAreaIdForeignKeyValidator",
+        "GtfsStopAreaStopIdForeignKeyValidator",
+        "GtfsStopLevelIdForeignKeyValidator",
+        "GtfsStopParentStationForeignKeyValidator",
+        "GtfsStopTimeDropOffBookingRuleIdForeignKeyValidator",
+        "GtfsStopTimeLocationGroupIdForeignKeyValidator",
+        "GtfsStopTimePickupBookingRuleIdForeignKeyValidator",
+        "GtfsTransferFromRouteIdForeignKeyValidator",
+        "GtfsTransferFromStopIdForeignKeyValidator",
+        "GtfsTransferFromTripIdForeignKeyValidator",
+        "GtfsTransferToRouteIdForeignKeyValidator",
+        "GtfsTransferToStopIdForeignKeyValidator",
+        "GtfsTransferToTripIdForeignKeyValidator",
+        "GtfsTripShapeIdForeignKeyValidator",
+        "LocationIdForeignKeyValidator",
+        "PickupBookingRuleIdValidator",
+        "TransferDistanceValidator"
+      ],
+      "runtime_logging_warning": "SLF4J StaticLoggerBinder not found; falls back to NOP logging"
+    },
+    "caltrain-before": {
+      "input_file": "validation/canonical-validator/caltrain-before-repacked.zip",
+      "input_sha256": "a1c9e730a51d980ab701964f8b6b9e0cb7ed8e9b77eb18bc9a61c6944d0c9ff4",
+      "command": [
+        "java",
+        "-Djava.io.tmpdir=<VALIDATOR_TEMP_DIR>",
+        "-jar",
+        "validation/canonical-validator/gtfs-validator-7.1.0-cli.jar",
+        "-i",
+        "validation/canonical-validator/caltrain-before-repacked.zip",
+        "-o",
+        "validation/canonical-validator/caltrain-before-report",
+        "-d",
+        "2026-06-17",
+        "-t",
+        "1",
+        "-svu",
+        "-p"
+      ],
+      "exit_code": 0,
+      "validator_version": "7.1.0",
+      "validated_at": "2026-10-18T01:21:20+11:00",
+      "date_for_validation": "2026-06-17",
+      "report_file": "validation/canonical-validator/caltrain-before-report/report.json",
+      "report_sha256": "74a53d2414eb2e179fc977823715edffe7c913a8812a7e55282fc6345d138438",
+      "notice_occurrence_counts": {
+        "ERROR": 0,
+        "WARNING": 6,
+        "INFO": 46
+      },
+      "notices": [
+        {
+          "code": "route_short_name_too_long",
+          "severity": "WARNING",
+          "totalNotices": 2
+        },
+        {
+          "code": "stop_without_stop_time",
+          "severity": "WARNING",
+          "totalNotices": 4
+        },
+        {
+          "code": "unknown_column",
+          "severity": "INFO",
+          "totalNotices": 35
+        },
+        {
+          "code": "unknown_file",
+          "severity": "INFO",
+          "totalNotices": 11
+        }
+      ],
+      "system_errors": [],
+      "skipped_validator_count": 29,
+      "skipped_validators": [
+        "StopTimesShapeDistTraveledPresenceValidator",
+        "GtfsAttributionAgencyIdForeignKeyValidator",
+        "GtfsAttributionRouteIdForeignKeyValidator",
+        "GtfsAttributionTripIdForeignKeyValidator",
+        "GtfsFareLegJoinRuleFromStopIdForeignKeyValidator",
+        "GtfsFareLegJoinRuleToStopIdForeignKeyValidator",
+        "GtfsFareLegRuleFareProductIdForeignKeyValidator",
+        "GtfsFareLegRuleFromAreaIdForeignKeyValidator",
+        "GtfsFareLegRuleFromTimeframeGroupIdForeignKeyValidator",
+        "GtfsFareLegRuleToAreaIdForeignKeyValidator",
+        "GtfsFareLegRuleToTimeframeGroupIdForeignKeyValidator",
+        "GtfsFareProductFareMediaIdForeignKeyValidator",
+        "GtfsFareProductRiderCategoryIdForeignKeyValidator",
+        "GtfsFareTransferRuleFareProductIdForeignKeyValidator",
+        "GtfsFareTransferRuleFromLegGroupIdForeignKeyValidator",
+        "GtfsFareTransferRuleToLegGroupIdForeignKeyValidator",
+        "GtfsPathwayFromStopIdForeignKeyValidator",
+        "GtfsPathwayToStopIdForeignKeyValidator",
+        "GtfsRouteNetworkNetworkIdForeignKeyValidator",
+        "GtfsRouteNetworkRouteIdForeignKeyValidator",
+        "GtfsStopAreaAreaIdForeignKeyValidator",
+        "GtfsStopAreaStopIdForeignKeyValidator",
+        "GtfsStopLevelIdForeignKeyValidator",
+        "GtfsStopTimeLocationGroupIdForeignKeyValidator",
+        "GtfsTransferFromRouteIdForeignKeyValidator",
+        "GtfsTransferFromTripIdForeignKeyValidator",
+        "GtfsTransferToRouteIdForeignKeyValidator",
+        "GtfsTransferToTripIdForeignKeyValidator",
+        "LocationIdForeignKeyValidator"
+      ],
+      "runtime_logging_warning": "SLF4J StaticLoggerBinder not found; falls back to NOP logging",
+      "raw_notice_examples": "Excluded from source distribution; retained in local validation evidence."
+    },
+    "caltrain-after": {
+      "input_file": "validation/canonical-validator/caltrain-after-repacked.zip",
+      "input_sha256": "651d9f61f5f9c65ae57739688192262c2da5c972862aa3caf9e8e662d199e2c1",
+      "command": [
+        "java",
+        "-Djava.io.tmpdir=<VALIDATOR_TEMP_DIR>",
+        "-jar",
+        "validation/canonical-validator/gtfs-validator-7.1.0-cli.jar",
+        "-i",
+        "validation/canonical-validator/caltrain-after-repacked.zip",
+        "-o",
+        "validation/canonical-validator/caltrain-after-report",
+        "-d",
+        "2026-06-17",
+        "-t",
+        "1",
+        "-svu",
+        "-p"
+      ],
+      "exit_code": 0,
+      "validator_version": "7.1.0",
+      "validated_at": "2026-10-18T01:21:21+11:00",
+      "date_for_validation": "2026-06-17",
+      "report_file": "validation/canonical-validator/caltrain-after-report/report.json",
+      "report_sha256": "f08348058823dc89e9cd12c12d969f848b66e0ca4873c0e5aa64c97c10f4dc29",
+      "notice_occurrence_counts": {
+        "ERROR": 0,
+        "WARNING": 6,
+        "INFO": 46
+      },
+      "notices": [
+        {
+          "code": "route_short_name_too_long",
+          "severity": "WARNING",
+          "totalNotices": 2
+        },
+        {
+          "code": "stop_without_stop_time",
+          "severity": "WARNING",
+          "totalNotices": 4
+        },
+        {
+          "code": "unknown_column",
+          "severity": "INFO",
+          "totalNotices": 35
+        },
+        {
+          "code": "unknown_file",
+          "severity": "INFO",
+          "totalNotices": 11
+        }
+      ],
+      "system_errors": [],
+      "skipped_validator_count": 29,
+      "skipped_validators": [
+        "StopTimesShapeDistTraveledPresenceValidator",
+        "GtfsAttributionAgencyIdForeignKeyValidator",
+        "GtfsAttributionRouteIdForeignKeyValidator",
+        "GtfsAttributionTripIdForeignKeyValidator",
+        "GtfsFareLegJoinRuleFromStopIdForeignKeyValidator",
+        "GtfsFareLegJoinRuleToStopIdForeignKeyValidator",
+        "GtfsFareLegRuleFareProductIdForeignKeyValidator",
+        "GtfsFareLegRuleFromAreaIdForeignKeyValidator",
+        "GtfsFareLegRuleFromTimeframeGroupIdForeignKeyValidator",
+        "GtfsFareLegRuleToAreaIdForeignKeyValidator",
+        "GtfsFareLegRuleToTimeframeGroupIdForeignKeyValidator",
+        "GtfsFareProductFareMediaIdForeignKeyValidator",
+        "GtfsFareProductRiderCategoryIdForeignKeyValidator",
+        "GtfsFareTransferRuleFareProductIdForeignKeyValidator",
+        "GtfsFareTransferRuleFromLegGroupIdForeignKeyValidator",
+        "GtfsFareTransferRuleToLegGroupIdForeignKeyValidator",
+        "GtfsPathwayFromStopIdForeignKeyValidator",
+        "GtfsPathwayToStopIdForeignKeyValidator",
+        "GtfsRouteNetworkNetworkIdForeignKeyValidator",
+        "GtfsRouteNetworkRouteIdForeignKeyValidator",
+        "GtfsStopAreaAreaIdForeignKeyValidator",
+        "GtfsStopAreaStopIdForeignKeyValidator",
+        "GtfsStopLevelIdForeignKeyValidator",
+        "GtfsStopTimeLocationGroupIdForeignKeyValidator",
+        "GtfsTransferFromRouteIdForeignKeyValidator",
+        "GtfsTransferFromTripIdForeignKeyValidator",
+        "GtfsTransferToRouteIdForeignKeyValidator",
+        "GtfsTransferToTripIdForeignKeyValidator",
+        "LocationIdForeignKeyValidator"
+      ],
+      "runtime_logging_warning": "SLF4J StaticLoggerBinder not found; falls back to NOP logging",
+      "raw_notice_examples": "Excluded from source distribution; retained in local validation evidence."
+    },
+    "synthetic-canonical-clean": {
+      "input_file": "validation/canonical-validator/synthetic-canonical-clean.zip",
+      "input_sha256": "9da0bc6153149c3727cd77f31515a1697ef96411a466cf8e19c6d0aa2549c3f1",
+      "input_bytes": 1382,
+      "command": [
+        "java",
+        "-Djava.io.tmpdir=<VALIDATOR_TEMP_DIR>",
+        "-jar",
+        "validation/canonical-validator/gtfs-validator-7.1.0-cli.jar",
+        "-i",
+        "validation/canonical-validator/synthetic-canonical-clean.zip",
+        "-o",
+        "validation/canonical-validator/synthetic-canonical-clean-report",
+        "-d",
+        "2026-06-17",
+        "-t",
+        "1",
+        "-svu",
+        "-p"
+      ],
+      "exit_code": 0,
+      "validator_version": "7.1.0",
+      "validated_at": "2026-10-18T01:22:42+11:00",
+      "date_for_validation": "2026-06-17",
+      "report_file": "validation/canonical-validator/synthetic-canonical-clean-report/report.json",
+      "report_sha256": "48c7251b6286a2bd4a740c8a9165086379fd2de58400348b6ba1d28d3c35ecee",
+      "notice_occurrence_counts": {
+        "ERROR": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "notices": [],
+      "system_errors": [],
+      "skipped_validator_count": 51,
+      "skipped_validators": [
+        "PickupDropOffTypeValidator",
+        "PickupDropOffWindowValidator",
+        "StopTimesShapeDistTraveledPresenceValidator",
+        "StopTimeIncreasingDistanceValidator",
+        "StopTimesRecordValidator",
+        "GtfsTripMixedCaseValidator",
+        "ContinuousPickupDropOffValidator",
+        "FareProductDefaultRiderCategoriesValidator",
+        "GtfsAttributionAgencyIdForeignKeyValidator",
+        "GtfsAttributionRouteIdForeignKeyValidator",
+        "GtfsAttributionTripIdForeignKeyValidator",
+        "GtfsFareAttributeAgencyIdForeignKeyValidator",
+        "GtfsFareLegJoinRuleFromStopIdForeignKeyValidator",
+        "GtfsFareLegJoinRuleToStopIdForeignKeyValidator",
+        "GtfsFareLegRuleFareProductIdForeignKeyValidator",
+        "GtfsFareLegRuleFromAreaIdForeignKeyValidator",
+        "GtfsFareLegRuleFromTimeframeGroupIdForeignKeyValidator",
+        "GtfsFareLegRuleToAreaIdForeignKeyValidator",
+        "GtfsFareLegRuleToTimeframeGroupIdForeignKeyValidator",
+        "GtfsFareProductFareMediaIdForeignKeyValidator",
+        "GtfsFareProductRiderCategoryIdForeignKeyValidator",
+        "GtfsFareRuleContainsIdForeignKeyValidator",
+        "GtfsFareRuleDestinationIdForeignKeyValidator",
+        "GtfsFareRuleFareIdForeignKeyValidator",
+        "GtfsFareRuleOriginIdForeignKeyValidator",
+        "GtfsFareRuleRouteIdForeignKeyValidator",
+        "GtfsFareTransferRuleFareProductIdForeignKeyValidator",
+        "GtfsFareTransferRuleFromLegGroupIdForeignKeyValidator",
+        "GtfsFareTransferRuleToLegGroupIdForeignKeyValidator",
+        "GtfsFrequencyTripIdForeignKeyValidator",
+        "GtfsPathwayFromStopIdForeignKeyValidator",
+        "GtfsPathwayToStopIdForeignKeyValidator",
+        "GtfsRouteNetworkNetworkIdForeignKeyValidator",
+        "GtfsRouteNetworkRouteIdForeignKeyValidator",
+        "GtfsStopAreaAreaIdForeignKeyValidator",
+        "GtfsStopAreaStopIdForeignKeyValidator",
+        "GtfsStopLevelIdForeignKeyValidator",
+        "GtfsStopParentStationForeignKeyValidator",
+        "GtfsStopTimeDropOffBookingRuleIdForeignKeyValidator",
+        "GtfsStopTimeLocationGroupIdForeignKeyValidator",
+        "GtfsStopTimePickupBookingRuleIdForeignKeyValidator",
+        "GtfsTransferFromRouteIdForeignKeyValidator",
+        "GtfsTransferFromStopIdForeignKeyValidator",
+        "GtfsTransferFromTripIdForeignKeyValidator",
+        "GtfsTransferToRouteIdForeignKeyValidator",
+        "GtfsTransferToStopIdForeignKeyValidator",
+        "GtfsTransferToTripIdForeignKeyValidator",
+        "GtfsTripShapeIdForeignKeyValidator",
+        "LocationIdForeignKeyValidator",
+        "PickupBookingRuleIdValidator",
+        "TransferDistanceValidator"
+      ],
+      "runtime_logging_warning": "SLF4J StaticLoggerBinder not found; falls back to NOP logging",
+      "generation": {
+        "source": "tests.support.zip_bytes(tests.support.minimal_feed(**overrides))",
+        "overrides_file": "validation/canonical-validator/synthetic-canonical-clean-overrides.json",
+        "changes": [
+          "A coordinates 37.4,-122.1",
+          "B coordinates 37.7,-122.4",
+          "Removed unused P stop",
+          "Added feed_version synthetic-1",
+          "Added feed_contact_email maintainer@example.org"
+        ],
+        "fixture_type": "Original invented synthetic sample, not Caltrain data; coordinates are plausible placeholders and do not establish actual transit service.",
+        "source_files_edited": false
+      }
+    },
+    "synthetic-after": {
+      "input_file": "examples/synthetic-after.zip",
+      "input_sha256": "4eca5a3d99e0deacd05c5197933a1b26e2dfc357131e82e80bd203dc04b36e1f",
+      "command": [
+        "java",
+        "-jar",
+        "validation/canonical-validator/gtfs-validator-7.1.0-cli.jar",
+        "-i",
+        "examples/synthetic-after.zip",
+        "-o",
+        "validation/canonical-validator/synthetic-after-report",
+        "-d",
+        "2026-06-17",
+        "-t",
+        "1",
+        "-svu",
+        "-p"
+      ],
+      "exit_code": 0,
+      "validator_version": "7.1.0",
+      "notice_occurrence_counts": {
+        "ERROR": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "notices": [],
+      "system_errors": [],
+      "report_sha256": "5dc2d89544f27f3aa13e3fd8eeabde8be176515b9adb78ded2a1d52a3166f73d"
+    }
+  },
+  "limits": [
+    "The exact unmodified minimal_feed() was checked and its one geometry error means it must not be described as a clean validator pass. A separately labeled adjusted synthetic example was also checked and has no feed notices.",
+    "Exit code 0 indicates the validator finished and does not mean there were no feed errors.",
+    "Validation date is pinned to 2026-06-17, matching the fixture journey date; these results do not establish current feed freshness.",
+    "Optional-data validators may be skipped, and extensions may be reported as unknown files/columns. The exact notices and skip lists are retained.",
+    "No country code was supplied; the validator reported ZZ.",
+    "Local ZIP inputs and --skip_validator_update were used; no upload action was invoked.",
+    "Canonical GTFS schema/data quality checks are separate from journey reachability, routing, accessibility, regressions, or license validation.",
+    "Outputs remain in ignored local validation/canonical-validator; no project package/test files were edited during these validator runs."
+  ],
+  "path_rendering": "Paths are sanitized portable placeholders, not verbatim execution commands. PROJECT_ROOT is the checkout; VALIDATOR_TEMP_DIR is a writable local temporary directory; AUTHORIZED_CALTRAIN_FIXTURE_ROOT is the explicitly configured root of separately obtained historical data. Actual validator version, hashes, exit codes, notices and outcomes are unchanged."
+}

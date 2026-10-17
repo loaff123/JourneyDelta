@@ -1,0 +1,32 @@
+{
+  "schema_version": "1",
+  "model": "scheduled-direct-v0",
+  "policy": {
+    "accessibility": "unconstrained"
+  },
+  "places": {
+    "a": {
+      "before_stop_id": "A",
+      "after_stop_id": "A"
+    },
+    "b": {
+      "before_stop_id": "B",
+      "after_stop_id": "B"
+    }
+  },
+  "cases": [
+    {
+      "id": "morning_direct",
+      "origin": "a",
+      "destination": "b",
+      "depart_after": "2026-06-17T07:55:00Z",
+      "horizon_end": "2026-06-17T09:15:00Z",
+      "max_transfers": 0,
+      "assertions": {
+        "reachable": true,
+        "arrive_by": "2026-06-17T08:45:00Z",
+        "max_arrival_delay_seconds": 300
+      }
+    }
+  ]
+}

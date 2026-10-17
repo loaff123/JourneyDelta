@@ -1,0 +1,246 @@
+{
+  "schema_inventory_version": "scheduled-direct-v0.1",
+  "status": "design specification, not implementation",
+  "standard_tables": {
+    "agency.txt": {
+      "modeled": [
+        "agency_id",
+        "agency_name",
+        "agency_timezone"
+      ],
+      "metadata": [
+        "agency_url",
+        "agency_lang",
+        "agency_phone",
+        "agency_fare_url",
+        "agency_email"
+      ]
+    },
+    "stops.txt": {
+      "modeled": [
+        "stop_id",
+        "location_type",
+        "parent_station",
+        "wheelchair_boarding"
+      ],
+      "metadata": [
+        "stop_code",
+        "stop_name",
+        "tts_stop_name",
+        "stop_desc",
+        "stop_lat",
+        "stop_lon",
+        "zone_id",
+        "stop_url",
+        "stop_timezone",
+        "level_id",
+        "platform_code"
+      ]
+    },
+    "routes.txt": {
+      "modeled": [
+        "route_id",
+        "agency_id",
+        "route_type",
+        "continuous_pickup",
+        "continuous_drop_off"
+      ],
+      "metadata": [
+        "route_short_name",
+        "route_long_name",
+        "route_desc",
+        "route_url",
+        "route_color",
+        "route_text_color",
+        "route_sort_order"
+      ]
+    },
+    "trips.txt": {
+      "modeled": [
+        "route_id",
+        "service_id",
+        "trip_id",
+        "wheelchair_accessible"
+      ],
+      "metadata": [
+        "trip_headsign",
+        "trip_short_name",
+        "direction_id",
+        "block_id",
+        "shape_id",
+        "bikes_allowed"
+      ]
+    },
+    "stop_times.txt": {
+      "modeled": [
+        "trip_id",
+        "arrival_time",
+        "departure_time",
+        "stop_id",
+        "stop_sequence",
+        "pickup_type",
+        "drop_off_type",
+        "continuous_pickup",
+        "continuous_drop_off",
+        "timepoint"
+      ],
+      "metadata": [
+        "stop_headsign",
+        "shape_dist_traveled"
+      ],
+      "blocked_nonempty": [
+        "location_group_id",
+        "location_id",
+        "start_pickup_drop_off_window",
+        "end_pickup_drop_off_window",
+        "pickup_booking_rule_id",
+        "drop_off_booking_rule_id"
+      ]
+    },
+    "calendar.txt": {
+      "modeled": [
+        "service_id",
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday",
+        "start_date",
+        "end_date"
+      ]
+    },
+    "calendar_dates.txt": {
+      "modeled": [
+        "service_id",
+        "date",
+        "exception_type"
+      ]
+    },
+    "frequencies.txt": {
+      "modeled": [
+        "trip_id",
+        "start_time",
+        "end_time",
+        "headway_secs",
+        "exact_times"
+      ]
+    },
+    "feed_info.txt": {
+      "modeled": [
+        "feed_start_date",
+        "feed_end_date"
+      ],
+      "metadata": [
+        "feed_publisher_name",
+        "feed_publisher_url",
+        "feed_lang",
+        "default_lang",
+        "feed_version",
+        "feed_contact_email",
+        "feed_contact_url"
+      ]
+    },
+    "transfers.txt": {
+      "outside_model": [
+        "from_stop_id",
+        "to_stop_id",
+        "transfer_type",
+        "min_transfer_time",
+        "from_route_id",
+        "to_route_id",
+        "from_trip_id",
+        "to_trip_id"
+      ]
+    },
+    "shapes.txt": {
+      "metadata": [
+        "shape_id",
+        "shape_pt_lat",
+        "shape_pt_lon",
+        "shape_pt_sequence",
+        "shape_dist_traveled"
+      ]
+    },
+    "fare_attributes.txt": {
+      "metadata": [
+        "fare_id",
+        "price",
+        "currency_type",
+        "payment_method",
+        "transfers",
+        "agency_id",
+        "transfer_duration"
+      ]
+    },
+    "fare_rules.txt": {
+      "metadata": [
+        "fare_id",
+        "route_id",
+        "origin_id",
+        "destination_id",
+        "contains_id"
+      ]
+    },
+    "rider_categories.txt": {
+      "metadata": [
+        "rider_category_id",
+        "rider_category_name",
+        "is_default_fare_category",
+        "eligibility_url"
+      ]
+    },
+    "levels.txt": {
+      "metadata": [
+        "level_id",
+        "level_index",
+        "level_name"
+      ]
+    },
+    "translations.txt": {
+      "metadata": [
+        "table_name",
+        "field_name",
+        "language",
+        "translation",
+        "record_id",
+        "record_sub_id",
+        "field_value"
+      ]
+    },
+    "attributions.txt": {
+      "metadata": [
+        "attribution_id",
+        "agency_id",
+        "route_id",
+        "trip_id",
+        "organization_name",
+        "is_producer",
+        "is_operator",
+        "is_authority",
+        "attribution_url",
+        "attribution_email",
+        "attribution_phone"
+      ]
+    },
+    "pathways.txt": {
+      "blocked_rows": [
+        "pathway_id",
+        "from_stop_id",
+        "to_stop_id",
+        "pathway_mode",
+        "is_bidirectional",
+        "length",
+        "traversal_time",
+        "stair_count",
+        "max_slope",
+        "min_width",
+        "signposted_as",
+        "reversed_signposted_as"
+      ]
+    }
+  },
+  "vendor_registry": "journeydelta-v0-vendor-registry.json",
+  "policy": "This is an explicit supported inventory, not a full GTFS schema. Unknown populated columns block. Unknown empty columns warn. Unknown GTFS text tables block. Known empty-only legacy schemas are defined in the vendor registry. Modeled/outside_model fields still undergo the spec's structural checks."
+}

@@ -1,0 +1,1293 @@
+{
+  "canonical_digest": "946cfebc3f6054c628c0a606124c8e11d2a36a5b7c5920cb80613c34af69ce2a",
+  "cases": [
+    {
+      "case": {
+        "arrive_by": 1781685900,
+        "description": "",
+        "destination": "b",
+        "horizon": {
+          "end": 1781687700,
+          "start": 1781682900
+        },
+        "id": "morning_direct",
+        "max_arrival_delay_seconds": 300,
+        "origin": "a"
+      },
+      "comparison": {
+        "after": {
+          "destination_stop": "B",
+          "itinerary": {
+            "alight_sequence": 2,
+            "arrival_utc": 1781686800,
+            "board_sequence": 1,
+            "boardings": 1,
+            "departure_utc": 1781683200,
+            "elapsed_seconds": 3900,
+            "estimated": false,
+            "events": [
+              {
+                "arrival": 1781683200,
+                "arrival_clock": "08:00:00",
+                "departure": 1781683200,
+                "departure_clock": "08:00:00",
+                "drop_off": true,
+                "estimated": false,
+                "pickup": true,
+                "sequence": 1,
+                "source": {
+                  "byte_end": 82,
+                  "byte_start": 58,
+                  "data_ordinal": 1,
+                  "logical_key": [
+                    "t",
+                    "1"
+                  ],
+                  "member_path": "stop_times.txt",
+                  "member_sha256": "d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67",
+                  "physical_lf_line": 2,
+                  "record_kind": "data",
+                  "side": "after"
+                },
+                "stop_id": "A"
+              },
+              {
+                "arrival": 1781686800,
+                "arrival_clock": "09:00:00",
+                "departure": 1781686800,
+                "departure_clock": "09:00:00",
+                "drop_off": true,
+                "estimated": false,
+                "pickup": true,
+                "sequence": 2,
+                "source": {
+                  "byte_end": 106,
+                  "byte_start": 82,
+                  "data_ordinal": 2,
+                  "logical_key": [
+                    "t",
+                    "2"
+                  ],
+                  "member_path": "stop_times.txt",
+                  "member_sha256": "d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67",
+                  "physical_lf_line": 3,
+                  "record_kind": "data",
+                  "side": "after"
+                },
+                "stop_id": "B"
+              }
+            ],
+            "frequency_start": null,
+            "ride_seconds": 3600,
+            "service_date": "2026-06-17",
+            "service_id": "s",
+            "sources": [
+              {
+                "byte_end": 34,
+                "byte_start": 28,
+                "data_ordinal": 1,
+                "logical_key": [
+                  "t"
+                ],
+                "member_path": "trips.txt",
+                "member_sha256": "a8fd672d7982454ae7b8c43d45a0984bd68aa2bf3fa16f37d5d90397494eb239",
+                "physical_lf_line": 2,
+                "record_kind": "data",
+                "side": "after"
+              },
+              {
+                "byte_end": 122,
+                "byte_start": 88,
+                "data_ordinal": 1,
+                "logical_key": [
+                  "s"
+                ],
+                "member_path": "calendar.txt",
+                "member_sha256": "6b103abf3809a2c1f4fb460db3c067ebf3c26c19223e2588d1af4ee86f112db3",
+                "physical_lf_line": 2,
+                "record_kind": "data",
+                "side": "after"
+              },
+              {
+                "byte_end": 82,
+                "byte_start": 58,
+                "data_ordinal": 1,
+                "logical_key": [
+                  "t",
+                  "1"
+                ],
+                "member_path": "stop_times.txt",
+                "member_sha256": "d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67",
+                "physical_lf_line": 2,
+                "record_kind": "data",
+                "side": "after"
+              },
+              {
+                "byte_end": 106,
+                "byte_start": 82,
+                "data_ordinal": 2,
+                "logical_key": [
+                  "t",
+                  "2"
+                ],
+                "member_path": "stop_times.txt",
+                "member_sha256": "d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67",
+                "physical_lf_line": 3,
+                "record_kind": "data",
+                "side": "after"
+              }
+            ],
+            "transfers": 0,
+            "trip_id": "t",
+            "wait_seconds": 300,
+            "wheelchair_accessible": "0"
+          },
+          "origin_stop": "A",
+          "scope": "Single boarding only. Multi-leg journeys were not evaluated."
+        },
+        "arrival_delta_seconds": 1800,
+        "assertions": {
+          "arrive_by": "fail",
+          "max_arrival_delay_seconds": "fail",
+          "reachable": "pass"
+        },
+        "before": {
+          "destination_stop": "B",
+          "itinerary": {
+            "alight_sequence": 2,
+            "arrival_utc": 1781685000,
+            "board_sequence": 1,
+            "boardings": 1,
+            "departure_utc": 1781683200,
+            "elapsed_seconds": 2100,
+            "estimated": false,
+            "events": [
+              {
+                "arrival": 1781683200,
+                "arrival_clock": "08:00:00",
+                "departure": 1781683200,
+                "departure_clock": "08:00:00",
+                "drop_off": true,
+                "estimated": false,
+                "pickup": true,
+                "sequence": 1,
+                "source": {
+                  "byte_end": 82,
+                  "byte_start": 58,
+                  "data_ordinal": 1,
+                  "logical_key": [
+                    "t",
+                    "1"
+                  ],
+                  "member_path": "stop_times.txt",
+                  "member_sha256": "d6ebee1de286d66b02f29b49d33da8120651d90c08747319d0c467b523fd58ef",
+                  "physical_lf_line": 2,
+                  "record_kind": "data",
+                  "side": "before"
+                },
+                "stop_id": "A"
+              },
+              {
+                "arrival": 1781685000,
+                "arrival_clock": "08:30:00",
+                "departure": 1781685000,
+                "departure_clock": "08:30:00",
+                "drop_off": true,
+                "estimated": false,
+                "pickup": true,
+                "sequence": 2,
+                "source": {
+                  "byte_end": 106,
+                  "byte_start": 82,
+                  "data_ordinal": 2,
+                  "logical_key": [
+                    "t",
+                    "2"
+                  ],
+                  "member_path": "stop_times.txt",
+                  "member_sha256": "d6ebee1de286d66b02f29b49d33da8120651d90c08747319d0c467b523fd58ef",
+                  "physical_lf_line": 3,
+                  "record_kind": "data",
+                  "side": "before"
+                },
+                "stop_id": "B"
+              }
+            ],
+            "frequency_start": null,
+            "ride_seconds": 1800,
+            "service_date": "2026-06-17",
+            "service_id": "s",
+            "sources": [
+              {
+                "byte_end": 34,
+                "byte_start": 28,
+                "data_ordinal": 1,
+                "logical_key": [
+                  "t"
+                ],
+                "member_path": "trips.txt",
+                "member_sha256": "a8fd672d7982454ae7b8c43d45a0984bd68aa2bf3fa16f37d5d90397494eb239",
+                "physical_lf_line": 2,
+                "record_kind": "data",
+                "side": "before"
+              },
+              {
+                "byte_end": 122,
+                "byte_start": 88,
+                "data_ordinal": 1,
+                "logical_key": [
+                  "s"
+                ],
+                "member_path": "calendar.txt",
+                "member_sha256": "6b103abf3809a2c1f4fb460db3c067ebf3c26c19223e2588d1af4ee86f112db3",
+                "physical_lf_line": 2,
+                "record_kind": "data",
+                "side": "before"
+              },
+              {
+                "byte_end": 82,
+                "byte_start": 58,
+                "data_ordinal": 1,
+                "logical_key": [
+                  "t",
+                  "1"
+                ],
+                "member_path": "stop_times.txt",
+                "member_sha256": "d6ebee1de286d66b02f29b49d33da8120651d90c08747319d0c467b523fd58ef",
+                "physical_lf_line": 2,
+                "record_kind": "data",
+                "side": "before"
+              },
+              {
+                "byte_end": 106,
+                "byte_start": 82,
+                "data_ordinal": 2,
+                "logical_key": [
+                  "t",
+                  "2"
+                ],
+                "member_path": "stop_times.txt",
+                "member_sha256": "d6ebee1de286d66b02f29b49d33da8120651d90c08747319d0c467b523fd58ef",
+                "physical_lf_line": 3,
+                "record_kind": "data",
+                "side": "before"
+              }
+            ],
+            "transfers": 0,
+            "trip_id": "t",
+            "wait_seconds": 300,
+            "wheelchair_accessible": "0"
+          },
+          "origin_stop": "A",
+          "scope": "Single boarding only. Multi-leg journeys were not evaluated."
+        },
+        "case": {
+          "arrive_by": 1781685900,
+          "description": "",
+          "destination": "b",
+          "horizon": {
+            "end": 1781687700,
+            "start": 1781682900
+          },
+          "id": "morning_direct",
+          "max_arrival_delay_seconds": 300,
+          "origin": "a"
+        },
+        "classification": "regressed",
+        "existing_deadline_violation": false,
+        "passed": false
+      },
+      "display": {
+        "after": {
+          "alighting_accessibility": {
+            "legacy_accessibility_id": null,
+            "sources": [
+              {
+                "byte_end": 75,
+                "byte_start": 56,
+                "data_ordinal": 2,
+                "logical_key": [
+                  "B"
+                ],
+                "member_path": "stops.txt",
+                "member_sha256": "0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf",
+                "physical_lf_line": 3,
+                "record_kind": "data",
+                "side": "after"
+              }
+            ],
+            "standard_declared": "0",
+            "standard_effective": "0"
+          },
+          "arrival": {
+            "agency_local": "2026-06-17T09:00:00+00:00",
+            "agency_timezone": "Etc/UTC",
+            "utc": "2026-06-17T09:00:00Z"
+          },
+          "boarding_accessibility": {
+            "legacy_accessibility_id": null,
+            "sources": [
+              {
+                "byte_end": 56,
+                "byte_start": 36,
+                "data_ordinal": 1,
+                "logical_key": [
+                  "A"
+                ],
+                "member_path": "stops.txt",
+                "member_sha256": "0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf",
+                "physical_lf_line": 2,
+                "record_kind": "data",
+                "side": "after"
+              }
+            ],
+            "standard_declared": "0",
+            "standard_effective": "0"
+          },
+          "departure": {
+            "agency_local": "2026-06-17T08:00:00+00:00",
+            "agency_timezone": "Etc/UTC",
+            "utc": "2026-06-17T08:00:00Z"
+          },
+          "events": [
+            {
+              "arrival": {
+                "agency_local": "2026-06-17T08:00:00+00:00",
+                "agency_timezone": "Etc/UTC",
+                "utc": "2026-06-17T08:00:00Z"
+              },
+              "departure": {
+                "agency_local": "2026-06-17T08:00:00+00:00",
+                "agency_timezone": "Etc/UTC",
+                "utc": "2026-06-17T08:00:00Z"
+              },
+              "estimated": false,
+              "sequence": 1,
+              "service_arrival_clock": "08:00:00",
+              "service_departure_clock": "08:00:00",
+              "stop_id": "A"
+            },
+            {
+              "arrival": {
+                "agency_local": "2026-06-17T09:00:00+00:00",
+                "agency_timezone": "Etc/UTC",
+                "utc": "2026-06-17T09:00:00Z"
+              },
+              "departure": {
+                "agency_local": "2026-06-17T09:00:00+00:00",
+                "agency_timezone": "Etc/UTC",
+                "utc": "2026-06-17T09:00:00Z"
+              },
+              "estimated": false,
+              "sequence": 2,
+              "service_arrival_clock": "09:00:00",
+              "service_departure_clock": "09:00:00",
+              "stop_id": "B"
+            }
+          ],
+          "service_date": "2026-06-17"
+        },
+        "before": {
+          "alighting_accessibility": {
+            "legacy_accessibility_id": null,
+            "sources": [
+              {
+                "byte_end": 75,
+                "byte_start": 56,
+                "data_ordinal": 2,
+                "logical_key": [
+                  "B"
+                ],
+                "member_path": "stops.txt",
+                "member_sha256": "0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf",
+                "physical_lf_line": 3,
+                "record_kind": "data",
+                "side": "before"
+              }
+            ],
+            "standard_declared": "0",
+            "standard_effective": "0"
+          },
+          "arrival": {
+            "agency_local": "2026-06-17T08:30:00+00:00",
+            "agency_timezone": "Etc/UTC",
+            "utc": "2026-06-17T08:30:00Z"
+          },
+          "boarding_accessibility": {
+            "legacy_accessibility_id": null,
+            "sources": [
+              {
+                "byte_end": 56,
+                "byte_start": 36,
+                "data_ordinal": 1,
+                "logical_key": [
+                  "A"
+                ],
+                "member_path": "stops.txt",
+                "member_sha256": "0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf",
+                "physical_lf_line": 2,
+                "record_kind": "data",
+                "side": "before"
+              }
+            ],
+            "standard_declared": "0",
+            "standard_effective": "0"
+          },
+          "departure": {
+            "agency_local": "2026-06-17T08:00:00+00:00",
+            "agency_timezone": "Etc/UTC",
+            "utc": "2026-06-17T08:00:00Z"
+          },
+          "events": [
+            {
+              "arrival": {
+                "agency_local": "2026-06-17T08:00:00+00:00",
+                "agency_timezone": "Etc/UTC",
+                "utc": "2026-06-17T08:00:00Z"
+              },
+              "departure": {
+                "agency_local": "2026-06-17T08:00:00+00:00",
+                "agency_timezone": "Etc/UTC",
+                "utc": "2026-06-17T08:00:00Z"
+              },
+              "estimated": false,
+              "sequence": 1,
+              "service_arrival_clock": "08:00:00",
+              "service_departure_clock": "08:00:00",
+              "stop_id": "A"
+            },
+            {
+              "arrival": {
+                "agency_local": "2026-06-17T08:30:00+00:00",
+                "agency_timezone": "Etc/UTC",
+                "utc": "2026-06-17T08:30:00Z"
+              },
+              "departure": {
+                "agency_local": "2026-06-17T08:30:00+00:00",
+                "agency_timezone": "Etc/UTC",
+                "utc": "2026-06-17T08:30:00Z"
+              },
+              "estimated": false,
+              "sequence": 2,
+              "service_arrival_clock": "08:30:00",
+              "service_departure_clock": "08:30:00",
+              "stop_id": "B"
+            }
+          ],
+          "service_date": "2026-06-17"
+        }
+      },
+      "evidence": {
+        "absence_checks": [],
+        "causal_claim": "Related witness changes; not a unique network-wide cause.",
+        "records": [
+          {
+            "anchor": "source-0230a0566a5a9899a5eaef80",
+            "fields": {
+              "end_date": "20261231",
+              "friday": "1",
+              "monday": "1",
+              "saturday": "1",
+              "service_id": "s",
+              "start_date": "20260101",
+              "sunday": "1",
+              "thursday": "1",
+              "tuesday": "1",
+              "wednesday": "1"
+            },
+            "raw_text": "s,1,1,1,1,1,1,1,20260101,20261231\n",
+            "source": {
+              "byte_end": 122,
+              "byte_start": 88,
+              "data_ordinal": 1,
+              "logical_key": [
+                "s"
+              ],
+              "member_path": "calendar.txt",
+              "member_sha256": "6b103abf3809a2c1f4fb460db3c067ebf3c26c19223e2588d1af4ee86f112db3",
+              "physical_lf_line": 2,
+              "record_kind": "data",
+              "side": "after"
+            }
+          },
+          {
+            "anchor": "source-112d2ba49476c74573517f12",
+            "fields": {
+              "agency_id": "ag",
+              "route_id": "r",
+              "route_short_name": "R",
+              "route_type": "2"
+            },
+            "raw_text": "r,ag,R,2\n",
+            "source": {
+              "byte_end": 56,
+              "byte_start": 47,
+              "data_ordinal": 1,
+              "logical_key": [
+                "r"
+              ],
+              "member_path": "routes.txt",
+              "member_sha256": "67cdf3ee3e1d93420cd4f967831213a1179d3f3d2e276b8d715c901a1f69f7d9",
+              "physical_lf_line": 2,
+              "record_kind": "data",
+              "side": "before"
+            }
+          },
+          {
+            "anchor": "source-12685bc230099a6dd87259f8",
+            "fields": {
+              "agency_id": "ag",
+              "agency_name": "Agency",
+              "agency_timezone": "Etc/UTC",
+              "agency_url": "https://example.org"
+            },
+            "raw_text": "ag,Agency,https://example.org,Etc/UTC\n",
+            "source": {
+              "byte_end": 87,
+              "byte_start": 49,
+              "data_ordinal": 1,
+              "logical_key": [
+                "ag"
+              ],
+              "member_path": "agency.txt",
+              "member_sha256": "56af5d3202a99132d688fe9c2ba42abb3f747843ddea3f4885421be3b65a7f2d",
+              "physical_lf_line": 2,
+              "record_kind": "data",
+              "side": "after"
+            }
+          },
+          {
+            "anchor": "source-1a01c464fe85c5bb81611208",
+            "fields": {
+              "agency_id": "ag",
+              "agency_name": "Agency",
+              "agency_timezone": "Etc/UTC",
+              "agency_url": "https://example.org"
+            },
+            "raw_text": "ag,Agency,https://example.org,Etc/UTC\n",
+            "source": {
+              "byte_end": 87,
+              "byte_start": 49,
+              "data_ordinal": 1,
+              "logical_key": [
+                "ag"
+              ],
+              "member_path": "agency.txt",
+              "member_sha256": "56af5d3202a99132d688fe9c2ba42abb3f747843ddea3f4885421be3b65a7f2d",
+              "physical_lf_line": 2,
+              "record_kind": "data",
+              "side": "before"
+            }
+          },
+          {
+            "anchor": "source-1decce3a97ec5aef7676acc2",
+            "fields": {
+              "agency_id": "ag",
+              "route_id": "r",
+              "route_short_name": "R",
+              "route_type": "2"
+            },
+            "raw_text": "r,ag,R,2\n",
+            "source": {
+              "byte_end": 56,
+              "byte_start": 47,
+              "data_ordinal": 1,
+              "logical_key": [
+                "r"
+              ],
+              "member_path": "routes.txt",
+              "member_sha256": "67cdf3ee3e1d93420cd4f967831213a1179d3f3d2e276b8d715c901a1f69f7d9",
+              "physical_lf_line": 2,
+              "record_kind": "data",
+              "side": "after"
+            }
+          },
+          {
+            "anchor": "source-326cf79967cef398addf953a",
+            "fields": {
+              "stop_id": "A",
+              "stop_lat": "37.4",
+              "stop_lon": "-122.1",
+              "stop_name": "Alpha"
+            },
+            "raw_text": "A,Alpha,37.4,-122.1\n",
+            "source": {
+              "byte_end": 56,
+              "byte_start": 36,
+              "data_ordinal": 1,
+              "logical_key": [
+                "A"
+              ],
+              "member_path": "stops.txt",
+              "member_sha256": "0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf",
+              "physical_lf_line": 2,
+              "record_kind": "data",
+              "side": "after"
+            }
+          },
+          {
+            "anchor": "source-3cf3dcd2b1bf1f0022de1b2c",
+            "fields": {
+              "route_id": "r",
+              "service_id": "s",
+              "trip_id": "t"
+            },
+            "raw_text": "r,s,t\n",
+            "source": {
+              "byte_end": 34,
+              "byte_start": 28,
+              "data_ordinal": 1,
+              "logical_key": [
+                "t"
+              ],
+              "member_path": "trips.txt",
+              "member_sha256": "a8fd672d7982454ae7b8c43d45a0984bd68aa2bf3fa16f37d5d90397494eb239",
+              "physical_lf_line": 2,
+              "record_kind": "data",
+              "side": "after"
+            }
+          },
+          {
+            "anchor": "source-469e164684b0e9040e9c4482",
+            "fields": {
+              "stop_id": "B",
+              "stop_lat": "37.7",
+              "stop_lon": "-122.4",
+              "stop_name": "Beta"
+            },
+            "raw_text": "B,Beta,37.7,-122.4\n",
+            "source": {
+              "byte_end": 75,
+              "byte_start": 56,
+              "data_ordinal": 2,
+              "logical_key": [
+                "B"
+              ],
+              "member_path": "stops.txt",
+              "member_sha256": "0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf",
+              "physical_lf_line": 3,
+              "record_kind": "data",
+              "side": "before"
+            }
+          },
+          {
+            "anchor": "source-54520ec4cd6b863f8fe7b3e5",
+            "fields": {
+              "feed_contact_email": "maintainer@example.org",
+              "feed_end_date": "20261231",
+              "feed_lang": "en",
+              "feed_publisher_name": "Agency",
+              "feed_publisher_url": "https://example.org",
+              "feed_start_date": "20260101",
+              "feed_version": "synthetic-1"
+            },
+            "raw_text": "Agency,https://example.org,en,20260101,20261231,synthetic-1,maintainer@example.org\n",
+            "source": {
+              "byte_end": 194,
+              "byte_start": 111,
+              "data_ordinal": 1,
+              "logical_key": [
+                "1"
+              ],
+              "member_path": "feed_info.txt",
+              "member_sha256": "3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914",
+              "physical_lf_line": 2,
+              "record_kind": "data",
+              "side": "after"
+            }
+          },
+          {
+            "anchor": "source-59b4e05ea94e03ce7436e123",
+            "fields": {
+              "arrival_time": "08:00:00",
+              "departure_time": "08:00:00",
+              "stop_id": "A",
+              "stop_sequence": "1",
+              "trip_id": "t"
+            },
+            "raw_text": "t,08:00:00,08:00:00,A,1\n",
+            "source": {
+              "byte_end": 82,
+              "byte_start": 58,
+              "data_ordinal": 1,
+              "logical_key": [
+                "t",
+                "1"
+              ],
+              "member_path": "stop_times.txt",
+              "member_sha256": "d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67",
+              "physical_lf_line": 2,
+              "record_kind": "data",
+              "side": "after"
+            }
+          },
+          {
+            "anchor": "source-787e7a3995c867c98247c6f3",
+            "fields": {
+              "arrival_time": "09:00:00",
+              "departure_time": "09:00:00",
+              "stop_id": "B",
+              "stop_sequence": "2",
+              "trip_id": "t"
+            },
+            "raw_text": "t,09:00:00,09:00:00,B,2\n",
+            "source": {
+              "byte_end": 106,
+              "byte_start": 82,
+              "data_ordinal": 2,
+              "logical_key": [
+                "t",
+                "2"
+              ],
+              "member_path": "stop_times.txt",
+              "member_sha256": "d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67",
+              "physical_lf_line": 3,
+              "record_kind": "data",
+              "side": "after"
+            }
+          },
+          {
+            "anchor": "source-7f5cdf4d772cb07c966cbda4",
+            "fields": {
+              "arrival_time": "08:30:00",
+              "departure_time": "08:30:00",
+              "stop_id": "B",
+              "stop_sequence": "2",
+              "trip_id": "t"
+            },
+            "raw_text": "t,08:30:00,08:30:00,B,2\n",
+            "source": {
+              "byte_end": 106,
+              "byte_start": 82,
+              "data_ordinal": 2,
+              "logical_key": [
+                "t",
+                "2"
+              ],
+              "member_path": "stop_times.txt",
+              "member_sha256": "d6ebee1de286d66b02f29b49d33da8120651d90c08747319d0c467b523fd58ef",
+              "physical_lf_line": 3,
+              "record_kind": "data",
+              "side": "before"
+            }
+          },
+          {
+            "anchor": "source-874f1030bd3612bd19a8e3ba",
+            "fields": {
+              "end_date": "20261231",
+              "friday": "1",
+              "monday": "1",
+              "saturday": "1",
+              "service_id": "s",
+              "start_date": "20260101",
+              "sunday": "1",
+              "thursday": "1",
+              "tuesday": "1",
+              "wednesday": "1"
+            },
+            "raw_text": "s,1,1,1,1,1,1,1,20260101,20261231\n",
+            "source": {
+              "byte_end": 122,
+              "byte_start": 88,
+              "data_ordinal": 1,
+              "logical_key": [
+                "s"
+              ],
+              "member_path": "calendar.txt",
+              "member_sha256": "6b103abf3809a2c1f4fb460db3c067ebf3c26c19223e2588d1af4ee86f112db3",
+              "physical_lf_line": 2,
+              "record_kind": "data",
+              "side": "before"
+            }
+          },
+          {
+            "anchor": "source-ba257c2090677535b1ea5033",
+            "fields": {
+              "stop_id": "A",
+              "stop_lat": "37.4",
+              "stop_lon": "-122.1",
+              "stop_name": "Alpha"
+            },
+            "raw_text": "A,Alpha,37.4,-122.1\n",
+            "source": {
+              "byte_end": 56,
+              "byte_start": 36,
+              "data_ordinal": 1,
+              "logical_key": [
+                "A"
+              ],
+              "member_path": "stops.txt",
+              "member_sha256": "0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf",
+              "physical_lf_line": 2,
+              "record_kind": "data",
+              "side": "before"
+            }
+          },
+          {
+            "anchor": "source-cfe5bd13c8f50b42459e166a",
+            "fields": {
+              "feed_contact_email": "maintainer@example.org",
+              "feed_end_date": "20261231",
+              "feed_lang": "en",
+              "feed_publisher_name": "Agency",
+              "feed_publisher_url": "https://example.org",
+              "feed_start_date": "20260101",
+              "feed_version": "synthetic-1"
+            },
+            "raw_text": "Agency,https://example.org,en,20260101,20261231,synthetic-1,maintainer@example.org\n",
+            "source": {
+              "byte_end": 194,
+              "byte_start": 111,
+              "data_ordinal": 1,
+              "logical_key": [
+                "1"
+              ],
+              "member_path": "feed_info.txt",
+              "member_sha256": "3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914",
+              "physical_lf_line": 2,
+              "record_kind": "data",
+              "side": "before"
+            }
+          },
+          {
+            "anchor": "source-d1c853d4f0556f8621049ae3",
+            "fields": {
+              "stop_id": "B",
+              "stop_lat": "37.7",
+              "stop_lon": "-122.4",
+              "stop_name": "Beta"
+            },
+            "raw_text": "B,Beta,37.7,-122.4\n",
+            "source": {
+              "byte_end": 75,
+              "byte_start": 56,
+              "data_ordinal": 2,
+              "logical_key": [
+                "B"
+              ],
+              "member_path": "stops.txt",
+              "member_sha256": "0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf",
+              "physical_lf_line": 3,
+              "record_kind": "data",
+              "side": "after"
+            }
+          },
+          {
+            "anchor": "source-e6d7e3a989a04966fc32cd10",
+            "fields": {
+              "arrival_time": "08:00:00",
+              "departure_time": "08:00:00",
+              "stop_id": "A",
+              "stop_sequence": "1",
+              "trip_id": "t"
+            },
+            "raw_text": "t,08:00:00,08:00:00,A,1\n",
+            "source": {
+              "byte_end": 82,
+              "byte_start": 58,
+              "data_ordinal": 1,
+              "logical_key": [
+                "t",
+                "1"
+              ],
+              "member_path": "stop_times.txt",
+              "member_sha256": "d6ebee1de286d66b02f29b49d33da8120651d90c08747319d0c467b523fd58ef",
+              "physical_lf_line": 2,
+              "record_kind": "data",
+              "side": "before"
+            }
+          },
+          {
+            "anchor": "source-f3d1eecdb72bfbeeed0615ee",
+            "fields": {
+              "route_id": "r",
+              "service_id": "s",
+              "trip_id": "t"
+            },
+            "raw_text": "r,s,t\n",
+            "source": {
+              "byte_end": 34,
+              "byte_start": 28,
+              "data_ordinal": 1,
+              "logical_key": [
+                "t"
+              ],
+              "member_path": "trips.txt",
+              "member_sha256": "a8fd672d7982454ae7b8c43d45a0984bd68aa2bf3fa16f37d5d90397494eb239",
+              "physical_lf_line": 2,
+              "record_kind": "data",
+              "side": "before"
+            }
+          }
+        ],
+        "related_changes": [
+          {
+            "after_anchor": "source-787e7a3995c867c98247c6f3",
+            "before_anchor": "source-7f5cdf4d772cb07c966cbda4",
+            "changed_fields": [
+              "arrival_time",
+              "departure_time"
+            ],
+            "logical_key": [
+              "t",
+              "2"
+            ],
+            "member_path": "stop_times.txt"
+          }
+        ],
+        "replay": {
+          "arrival_delta_seconds": 1800,
+          "arrival_utc": 1781686800,
+          "departure_utc": 1781683200,
+          "permitted_within_horizon": true,
+          "reasons": [],
+          "sources": [
+            {
+              "byte_end": 34,
+              "byte_start": 28,
+              "data_ordinal": 1,
+              "logical_key": [
+                "t"
+              ],
+              "member_path": "trips.txt",
+              "member_sha256": "a8fd672d7982454ae7b8c43d45a0984bd68aa2bf3fa16f37d5d90397494eb239",
+              "physical_lf_line": 2,
+              "record_kind": "data",
+              "side": "after"
+            },
+            {
+              "byte_end": 122,
+              "byte_start": 88,
+              "data_ordinal": 1,
+              "logical_key": [
+                "s"
+              ],
+              "member_path": "calendar.txt",
+              "member_sha256": "6b103abf3809a2c1f4fb460db3c067ebf3c26c19223e2588d1af4ee86f112db3",
+              "physical_lf_line": 2,
+              "record_kind": "data",
+              "side": "after"
+            },
+            {
+              "byte_end": 82,
+              "byte_start": 58,
+              "data_ordinal": 1,
+              "logical_key": [
+                "t",
+                "1"
+              ],
+              "member_path": "stop_times.txt",
+              "member_sha256": "d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67",
+              "physical_lf_line": 2,
+              "record_kind": "data",
+              "side": "after"
+            },
+            {
+              "byte_end": 106,
+              "byte_start": 82,
+              "data_ordinal": 2,
+              "logical_key": [
+                "t",
+                "2"
+              ],
+              "member_path": "stop_times.txt",
+              "member_sha256": "d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67",
+              "physical_lf_line": 3,
+              "record_kind": "data",
+              "side": "after"
+            }
+          ],
+          "status": "replayed"
+        }
+      },
+      "expanded_events": {
+        "after": 2,
+        "before": 2
+      },
+      "id": "morning_direct",
+      "service_dates": [
+        "2026-06-17"
+      ],
+      "status": "fail"
+    }
+  ],
+  "common_max_expanded_clock": 32400,
+  "coverage": {
+    "after": {
+      "end_date": "2026-12-31",
+      "origin": "publisher",
+      "sources": [
+        {
+          "byte_end": 194,
+          "byte_start": 111,
+          "data_ordinal": 1,
+          "logical_key": [
+            "1"
+          ],
+          "member_path": "feed_info.txt",
+          "member_sha256": "3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914",
+          "physical_lf_line": 2,
+          "record_kind": "data",
+          "side": "after"
+        }
+      ],
+      "start_date": "2026-01-01"
+    },
+    "before": {
+      "end_date": "2026-12-31",
+      "origin": "publisher",
+      "sources": [
+        {
+          "byte_end": 194,
+          "byte_start": 111,
+          "data_ordinal": 1,
+          "logical_key": [
+            "1"
+          ],
+          "member_path": "feed_info.txt",
+          "member_sha256": "3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914",
+          "physical_lf_line": 2,
+          "record_kind": "data",
+          "side": "before"
+        }
+      ],
+      "start_date": "2026-01-01"
+    }
+  },
+  "diagnostic_evidence": [],
+  "diagnostics": [],
+  "exit_code": 1,
+  "feeds": {
+    "after": {
+      "archive_sha256": "4eca5a3d99e0deacd05c5197933a1b26e2dfc357131e82e80bd203dc04b36e1f",
+      "capability_inventory": {
+        "agency.txt": {
+          "columns": [
+            "agency_id",
+            "agency_name",
+            "agency_url",
+            "agency_timezone"
+          ],
+          "disposition": "modeled_and_metadata",
+          "rows": 1
+        },
+        "calendar.txt": {
+          "columns": [
+            "service_id",
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday",
+            "sunday",
+            "start_date",
+            "end_date"
+          ],
+          "disposition": "modeled_and_metadata",
+          "rows": 1
+        },
+        "feed_info.txt": {
+          "columns": [
+            "feed_publisher_name",
+            "feed_publisher_url",
+            "feed_lang",
+            "feed_start_date",
+            "feed_end_date",
+            "feed_version",
+            "feed_contact_email"
+          ],
+          "disposition": "modeled_and_metadata",
+          "rows": 1
+        },
+        "routes.txt": {
+          "columns": [
+            "route_id",
+            "agency_id",
+            "route_short_name",
+            "route_type"
+          ],
+          "disposition": "modeled_and_metadata",
+          "rows": 1
+        },
+        "stop_times.txt": {
+          "columns": [
+            "trip_id",
+            "arrival_time",
+            "departure_time",
+            "stop_id",
+            "stop_sequence"
+          ],
+          "disposition": "modeled_and_metadata",
+          "rows": 2
+        },
+        "stops.txt": {
+          "columns": [
+            "stop_id",
+            "stop_name",
+            "stop_lat",
+            "stop_lon"
+          ],
+          "disposition": "modeled_and_metadata",
+          "rows": 2
+        },
+        "trips.txt": {
+          "columns": [
+            "route_id",
+            "service_id",
+            "trip_id"
+          ],
+          "disposition": "modeled_and_metadata",
+          "rows": 1
+        },
+        "versions": {
+          "registry": "trillium-reviewed-v1",
+          "registry_sha256": "eb767e9201f5bd3e14e45c6e7f301c38ed2ee81d9f4e5a60dd176304f58a98b5",
+          "schema": "scheduled-direct-v0.1",
+          "schema_sha256": "6f1d789dd77dc57c581fb0cedb325a52e6fed545734448c864acebace781324c"
+        }
+      },
+      "excluded_members": [],
+      "members": {
+        "agency.txt": "56af5d3202a99132d688fe9c2ba42abb3f747843ddea3f4885421be3b65a7f2d",
+        "calendar.txt": "6b103abf3809a2c1f4fb460db3c067ebf3c26c19223e2588d1af4ee86f112db3",
+        "feed_info.txt": "3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914",
+        "routes.txt": "67cdf3ee3e1d93420cd4f967831213a1179d3f3d2e276b8d715c901a1f69f7d9",
+        "stop_times.txt": "d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67",
+        "stops.txt": "0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf",
+        "trips.txt": "a8fd672d7982454ae7b8c43d45a0984bd68aa2bf3fa16f37d5d90397494eb239"
+      }
+    },
+    "before": {
+      "archive_sha256": "9da0bc6153149c3727cd77f31515a1697ef96411a466cf8e19c6d0aa2549c3f1",
+      "capability_inventory": {
+        "agency.txt": {
+          "columns": [
+            "agency_id",
+            "agency_name",
+            "agency_url",
+            "agency_timezone"
+          ],
+          "disposition": "modeled_and_metadata",
+          "rows": 1
+        },
+        "calendar.txt": {
+          "columns": [
+            "service_id",
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday",
+            "sunday",
+            "start_date",
+            "end_date"
+          ],
+          "disposition": "modeled_and_metadata",
+          "rows": 1
+        },
+        "feed_info.txt": {
+          "columns": [
+            "feed_publisher_name",
+            "feed_publisher_url",
+            "feed_lang",
+            "feed_start_date",
+            "feed_end_date",
+            "feed_version",
+            "feed_contact_email"
+          ],
+          "disposition": "modeled_and_metadata",
+          "rows": 1
+        },
+        "routes.txt": {
+          "columns": [
+            "route_id",
+            "agency_id",
+            "route_short_name",
+            "route_type"
+          ],
+          "disposition": "modeled_and_metadata",
+          "rows": 1
+        },
+        "stop_times.txt": {
+          "columns": [
+            "trip_id",
+            "arrival_time",
+            "departure_time",
+            "stop_id",
+            "stop_sequence"
+          ],
+          "disposition": "modeled_and_metadata",
+          "rows": 2
+        },
+        "stops.txt": {
+          "columns": [
+            "stop_id",
+            "stop_name",
+            "stop_lat",
+            "stop_lon"
+          ],
+          "disposition": "modeled_and_metadata",
+          "rows": 2
+        },
+        "trips.txt": {
+          "columns": [
+            "route_id",
+            "service_id",
+            "trip_id"
+          ],
+          "disposition": "modeled_and_metadata",
+          "rows": 1
+        },
+        "versions": {
+          "registry": "trillium-reviewed-v1",
+          "registry_sha256": "eb767e9201f5bd3e14e45c6e7f301c38ed2ee81d9f4e5a60dd176304f58a98b5",
+          "schema": "scheduled-direct-v0.1",
+          "schema_sha256": "6f1d789dd77dc57c581fb0cedb325a52e6fed545734448c864acebace781324c"
+        }
+      },
+      "excluded_members": [],
+      "members": {
+        "agency.txt": "56af5d3202a99132d688fe9c2ba42abb3f747843ddea3f4885421be3b65a7f2d",
+        "calendar.txt": "6b103abf3809a2c1f4fb460db3c067ebf3c26c19223e2588d1af4ee86f112db3",
+        "feed_info.txt": "3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914",
+        "routes.txt": "67cdf3ee3e1d93420cd4f967831213a1179d3f3d2e276b8d715c901a1f69f7d9",
+        "stop_times.txt": "d6ebee1de286d66b02f29b49d33da8120651d90c08747319d0c467b523fd58ef",
+        "stops.txt": "0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf",
+        "trips.txt": "a8fd672d7982454ae7b8c43d45a0984bd68aa2bf3fa16f37d5d90397494eb239"
+      }
+    }
+  },
+  "gtfs_reference_revision": "2026-04-27",
+  "limits": {
+    "archive_bytes": 134217728,
+    "cases": 100,
+    "expanded_events": 250000,
+    "field_bytes": 1048576,
+    "member_bytes": 134217728,
+    "members": 128,
+    "total_bytes": 536870912
+  },
+  "model": "scheduled-direct-v0",
+  "non_evaluated": [
+    "multi-leg journeys",
+    "transfers and holding",
+    "station access/pathways",
+    "accessibility routing",
+    "fares",
+    "realtime",
+    "cross-trip block continuations"
+  ],
+  "origin_urls": {},
+  "schema_version": "1",
+  "scope": "Single boarding only. Multi-leg journeys were not evaluated.",
+  "status": "evaluated",
+  "suite_sha256": "fb0462c1e79250d56420257e30dada8da7296d232f607b6484f3a54b64cd92e9",
+  "timezone": {
+    "data_sha256": "fddce1e648a1732ac29afd9a16151b2973cdf082e7ec0c690f7e42be6b598b93",
+    "package_version": "2026.5",
+    "zone": "Etc/UTC"
+  },
+  "tool_version": "0.1.0a1"
+}

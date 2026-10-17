@@ -1,0 +1,37 @@
+name: tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  unit-and-synthetic:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.12', '3.13', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -r requirements-lock.txt
+      - run: python -m build --wheel --no-isolation
+      - run: python -m pip install --no-deps dist/*.whl
+      - name: Test installed wheel outside checkout
+        shell: bash
+        run: |
+          set -euo pipefail
+          test_root="$(mktemp -d)"
+          cp -R tests schemas examples "$test_root/"
+          cd "$test_root"
+          unset PYTHONPATH JOURNEYDELTA_CALTRAIN_ROOT
+          python -I -c 'import os, pathlib, journeydelta; p = pathlib.Path(journeydelta.__file__).resolve(); assert not p.is_relative_to(pathlib.Path(os.environ["GITHUB_WORKSPACE"]).resolve()), p; print(p)'
+          python -m pytest -q
+          journeydelta inspect examples/synthetic-before.zip
+          set +e
+          journeydelta compare examples/synthetic-before.zip examples/synthetic-after.zip --suite examples/journeys.json --out example-report
+          code=$?
+          set -e
+          test "$code" -eq 1
+          cmp example-report/report.json examples/report/report.json
+# Historical real-data tests require separately authorized local fixture bytes.
+# No Caltrain download, credential, or network access is part of runtime testing.

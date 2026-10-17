@@ -1,0 +1,1592 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>JourneyDelta report</title><style>body{max-width:1100px;margin:2rem auto;padding:0 1rem;font:16px system-ui;color:#17283b;background:#f8fafc}h1,h2{color:#183e62}section,details{background:white;padding:1rem;margin:1rem 0;border:1px solid #d7dfe8;border-radius:.5rem}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}a{color:#135d9c}li{margin:.4rem 0}</style><body><h1>JourneyDelta</h1><p>Single boarding only. Multi-leg journeys were not evaluated.</p><p>Status: evaluated · Exit 1</p><section><h2>Coverage and model</h2><pre>{
+  &quot;coverage&quot;: {
+    &quot;after&quot;: {
+      &quot;end_date&quot;: &quot;2026-12-31&quot;,
+      &quot;origin&quot;: &quot;publisher&quot;,
+      &quot;sources&quot;: [
+        {
+          &quot;byte_end&quot;: 194,
+          &quot;byte_start&quot;: 111,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;1&quot;
+          ],
+          &quot;member_path&quot;: &quot;feed_info.txt&quot;,
+          &quot;member_sha256&quot;: &quot;3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;after&quot;
+        }
+      ],
+      &quot;start_date&quot;: &quot;2026-01-01&quot;
+    },
+    &quot;before&quot;: {
+      &quot;end_date&quot;: &quot;2026-12-31&quot;,
+      &quot;origin&quot;: &quot;publisher&quot;,
+      &quot;sources&quot;: [
+        {
+          &quot;byte_end&quot;: 194,
+          &quot;byte_start&quot;: 111,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;1&quot;
+          ],
+          &quot;member_path&quot;: &quot;feed_info.txt&quot;,
+          &quot;member_sha256&quot;: &quot;3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;before&quot;
+        }
+      ],
+      &quot;start_date&quot;: &quot;2026-01-01&quot;
+    }
+  },
+  &quot;limits&quot;: {
+    &quot;archive_bytes&quot;: 134217728,
+    &quot;cases&quot;: 100,
+    &quot;expanded_events&quot;: 250000,
+    &quot;field_bytes&quot;: 1048576,
+    &quot;member_bytes&quot;: 134217728,
+    &quot;members&quot;: 128,
+    &quot;total_bytes&quot;: 536870912
+  },
+  &quot;non_evaluated&quot;: [
+    &quot;multi-leg journeys&quot;,
+    &quot;transfers and holding&quot;,
+    &quot;station access/pathways&quot;,
+    &quot;accessibility routing&quot;,
+    &quot;fares&quot;,
+    &quot;realtime&quot;,
+    &quot;cross-trip block continuations&quot;
+  ],
+  &quot;timezone&quot;: {
+    &quot;data_sha256&quot;: &quot;fddce1e648a1732ac29afd9a16151b2973cdf082e7ec0c690f7e42be6b598b93&quot;,
+    &quot;package_version&quot;: &quot;2026.5&quot;,
+    &quot;zone&quot;: &quot;Etc/UTC&quot;
+  }
+}</pre></section><section><h2>morning_direct · fail</h2><p></p><p>regressed; arrival delta seconds: 1800</p><h3>before</h3><p>Single boarding only. Multi-leg journeys were not evaluated.</p><p>Trip t, service date 2026-06-17<br>Departure 2026-06-17T08:00:00+00:00 / 2026-06-17T08:00:00Z<br>Arrival 2026-06-17T08:30:00+00:00 / 2026-06-17T08:30:00Z<br>Wait 300s; ride 1800s; elapsed 2100s</p><h3>after</h3><p>Single boarding only. Multi-leg journeys were not evaluated.</p><p>Trip t, service date 2026-06-17<br>Departure 2026-06-17T08:00:00+00:00 / 2026-06-17T08:00:00Z<br>Arrival 2026-06-17T09:00:00+00:00 / 2026-06-17T09:00:00Z<br>Wait 300s; ride 3600s; elapsed 3900s</p><p>Related witness changes; not a unique network-wide cause.</p><ul><li><a href="#source-0230a0566a5a9899a5eaef80">after/calendar.txt LF line 2</a></li><li><a href="#source-112d2ba49476c74573517f12">before/routes.txt LF line 2</a></li><li><a href="#source-12685bc230099a6dd87259f8">after/agency.txt LF line 2</a></li><li><a href="#source-1a01c464fe85c5bb81611208">before/agency.txt LF line 2</a></li><li><a href="#source-1decce3a97ec5aef7676acc2">after/routes.txt LF line 2</a></li><li><a href="#source-326cf79967cef398addf953a">after/stops.txt LF line 2</a></li><li><a href="#source-3cf3dcd2b1bf1f0022de1b2c">after/trips.txt LF line 2</a></li><li><a href="#source-469e164684b0e9040e9c4482">before/stops.txt LF line 3</a></li><li><a href="#source-54520ec4cd6b863f8fe7b3e5">after/feed_info.txt LF line 2</a></li><li><a href="#source-59b4e05ea94e03ce7436e123">after/stop_times.txt LF line 2</a></li><li><a href="#source-787e7a3995c867c98247c6f3">after/stop_times.txt LF line 3</a></li><li><a href="#source-7f5cdf4d772cb07c966cbda4">before/stop_times.txt LF line 3</a></li><li><a href="#source-874f1030bd3612bd19a8e3ba">before/calendar.txt LF line 2</a></li><li><a href="#source-ba257c2090677535b1ea5033">before/stops.txt LF line 2</a></li><li><a href="#source-cfe5bd13c8f50b42459e166a">before/feed_info.txt LF line 2</a></li><li><a href="#source-d1c853d4f0556f8621049ae3">after/stops.txt LF line 3</a></li><li><a href="#source-e6d7e3a989a04966fc32cd10">before/stop_times.txt LF line 2</a></li><li><a href="#source-f3d1eecdb72bfbeeed0615ee">before/trips.txt LF line 2</a></li></ul><details><summary>Complete case and evidence</summary><pre>{
+  &quot;case&quot;: {
+    &quot;arrive_by&quot;: 1781685900,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;destination&quot;: &quot;b&quot;,
+    &quot;horizon&quot;: {
+      &quot;end&quot;: 1781687700,
+      &quot;start&quot;: 1781682900
+    },
+    &quot;id&quot;: &quot;morning_direct&quot;,
+    &quot;max_arrival_delay_seconds&quot;: 300,
+    &quot;origin&quot;: &quot;a&quot;
+  },
+  &quot;comparison&quot;: {
+    &quot;after&quot;: {
+      &quot;destination_stop&quot;: &quot;B&quot;,
+      &quot;itinerary&quot;: {
+        &quot;alight_sequence&quot;: 2,
+        &quot;arrival_utc&quot;: 1781686800,
+        &quot;board_sequence&quot;: 1,
+        &quot;boardings&quot;: 1,
+        &quot;departure_utc&quot;: 1781683200,
+        &quot;elapsed_seconds&quot;: 3900,
+        &quot;estimated&quot;: false,
+        &quot;events&quot;: [
+          {
+            &quot;arrival&quot;: 1781683200,
+            &quot;arrival_clock&quot;: &quot;08:00:00&quot;,
+            &quot;departure&quot;: 1781683200,
+            &quot;departure_clock&quot;: &quot;08:00:00&quot;,
+            &quot;drop_off&quot;: true,
+            &quot;estimated&quot;: false,
+            &quot;pickup&quot;: true,
+            &quot;sequence&quot;: 1,
+            &quot;source&quot;: {
+              &quot;byte_end&quot;: 82,
+              &quot;byte_start&quot;: 58,
+              &quot;data_ordinal&quot;: 1,
+              &quot;logical_key&quot;: [
+                &quot;t&quot;,
+                &quot;1&quot;
+              ],
+              &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+              &quot;member_sha256&quot;: &quot;d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67&quot;,
+              &quot;physical_lf_line&quot;: 2,
+              &quot;record_kind&quot;: &quot;data&quot;,
+              &quot;side&quot;: &quot;after&quot;
+            },
+            &quot;stop_id&quot;: &quot;A&quot;
+          },
+          {
+            &quot;arrival&quot;: 1781686800,
+            &quot;arrival_clock&quot;: &quot;09:00:00&quot;,
+            &quot;departure&quot;: 1781686800,
+            &quot;departure_clock&quot;: &quot;09:00:00&quot;,
+            &quot;drop_off&quot;: true,
+            &quot;estimated&quot;: false,
+            &quot;pickup&quot;: true,
+            &quot;sequence&quot;: 2,
+            &quot;source&quot;: {
+              &quot;byte_end&quot;: 106,
+              &quot;byte_start&quot;: 82,
+              &quot;data_ordinal&quot;: 2,
+              &quot;logical_key&quot;: [
+                &quot;t&quot;,
+                &quot;2&quot;
+              ],
+              &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+              &quot;member_sha256&quot;: &quot;d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67&quot;,
+              &quot;physical_lf_line&quot;: 3,
+              &quot;record_kind&quot;: &quot;data&quot;,
+              &quot;side&quot;: &quot;after&quot;
+            },
+            &quot;stop_id&quot;: &quot;B&quot;
+          }
+        ],
+        &quot;frequency_start&quot;: null,
+        &quot;ride_seconds&quot;: 3600,
+        &quot;service_date&quot;: &quot;2026-06-17&quot;,
+        &quot;service_id&quot;: &quot;s&quot;,
+        &quot;sources&quot;: [
+          {
+            &quot;byte_end&quot;: 34,
+            &quot;byte_start&quot;: 28,
+            &quot;data_ordinal&quot;: 1,
+            &quot;logical_key&quot;: [
+              &quot;t&quot;
+            ],
+            &quot;member_path&quot;: &quot;trips.txt&quot;,
+            &quot;member_sha256&quot;: &quot;a8fd672d7982454ae7b8c43d45a0984bd68aa2bf3fa16f37d5d90397494eb239&quot;,
+            &quot;physical_lf_line&quot;: 2,
+            &quot;record_kind&quot;: &quot;data&quot;,
+            &quot;side&quot;: &quot;after&quot;
+          },
+          {
+            &quot;byte_end&quot;: 122,
+            &quot;byte_start&quot;: 88,
+            &quot;data_ordinal&quot;: 1,
+            &quot;logical_key&quot;: [
+              &quot;s&quot;
+            ],
+            &quot;member_path&quot;: &quot;calendar.txt&quot;,
+            &quot;member_sha256&quot;: &quot;6b103abf3809a2c1f4fb460db3c067ebf3c26c19223e2588d1af4ee86f112db3&quot;,
+            &quot;physical_lf_line&quot;: 2,
+            &quot;record_kind&quot;: &quot;data&quot;,
+            &quot;side&quot;: &quot;after&quot;
+          },
+          {
+            &quot;byte_end&quot;: 82,
+            &quot;byte_start&quot;: 58,
+            &quot;data_ordinal&quot;: 1,
+            &quot;logical_key&quot;: [
+              &quot;t&quot;,
+              &quot;1&quot;
+            ],
+            &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+            &quot;member_sha256&quot;: &quot;d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67&quot;,
+            &quot;physical_lf_line&quot;: 2,
+            &quot;record_kind&quot;: &quot;data&quot;,
+            &quot;side&quot;: &quot;after&quot;
+          },
+          {
+            &quot;byte_end&quot;: 106,
+            &quot;byte_start&quot;: 82,
+            &quot;data_ordinal&quot;: 2,
+            &quot;logical_key&quot;: [
+              &quot;t&quot;,
+              &quot;2&quot;
+            ],
+            &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+            &quot;member_sha256&quot;: &quot;d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67&quot;,
+            &quot;physical_lf_line&quot;: 3,
+            &quot;record_kind&quot;: &quot;data&quot;,
+            &quot;side&quot;: &quot;after&quot;
+          }
+        ],
+        &quot;transfers&quot;: 0,
+        &quot;trip_id&quot;: &quot;t&quot;,
+        &quot;wait_seconds&quot;: 300,
+        &quot;wheelchair_accessible&quot;: &quot;0&quot;
+      },
+      &quot;origin_stop&quot;: &quot;A&quot;,
+      &quot;scope&quot;: &quot;Single boarding only. Multi-leg journeys were not evaluated.&quot;
+    },
+    &quot;arrival_delta_seconds&quot;: 1800,
+    &quot;assertions&quot;: {
+      &quot;arrive_by&quot;: &quot;fail&quot;,
+      &quot;max_arrival_delay_seconds&quot;: &quot;fail&quot;,
+      &quot;reachable&quot;: &quot;pass&quot;
+    },
+    &quot;before&quot;: {
+      &quot;destination_stop&quot;: &quot;B&quot;,
+      &quot;itinerary&quot;: {
+        &quot;alight_sequence&quot;: 2,
+        &quot;arrival_utc&quot;: 1781685000,
+        &quot;board_sequence&quot;: 1,
+        &quot;boardings&quot;: 1,
+        &quot;departure_utc&quot;: 1781683200,
+        &quot;elapsed_seconds&quot;: 2100,
+        &quot;estimated&quot;: false,
+        &quot;events&quot;: [
+          {
+            &quot;arrival&quot;: 1781683200,
+            &quot;arrival_clock&quot;: &quot;08:00:00&quot;,
+            &quot;departure&quot;: 1781683200,
+            &quot;departure_clock&quot;: &quot;08:00:00&quot;,
+            &quot;drop_off&quot;: true,
+            &quot;estimated&quot;: false,
+            &quot;pickup&quot;: true,
+            &quot;sequence&quot;: 1,
+            &quot;source&quot;: {
+              &quot;byte_end&quot;: 82,
+              &quot;byte_start&quot;: 58,
+              &quot;data_ordinal&quot;: 1,
+              &quot;logical_key&quot;: [
+                &quot;t&quot;,
+                &quot;1&quot;
+              ],
+              &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+              &quot;member_sha256&quot;: &quot;d6ebee1de286d66b02f29b49d33da8120651d90c08747319d0c467b523fd58ef&quot;,
+              &quot;physical_lf_line&quot;: 2,
+              &quot;record_kind&quot;: &quot;data&quot;,
+              &quot;side&quot;: &quot;before&quot;
+            },
+            &quot;stop_id&quot;: &quot;A&quot;
+          },
+          {
+            &quot;arrival&quot;: 1781685000,
+            &quot;arrival_clock&quot;: &quot;08:30:00&quot;,
+            &quot;departure&quot;: 1781685000,
+            &quot;departure_clock&quot;: &quot;08:30:00&quot;,
+            &quot;drop_off&quot;: true,
+            &quot;estimated&quot;: false,
+            &quot;pickup&quot;: true,
+            &quot;sequence&quot;: 2,
+            &quot;source&quot;: {
+              &quot;byte_end&quot;: 106,
+              &quot;byte_start&quot;: 82,
+              &quot;data_ordinal&quot;: 2,
+              &quot;logical_key&quot;: [
+                &quot;t&quot;,
+                &quot;2&quot;
+              ],
+              &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+              &quot;member_sha256&quot;: &quot;d6ebee1de286d66b02f29b49d33da8120651d90c08747319d0c467b523fd58ef&quot;,
+              &quot;physical_lf_line&quot;: 3,
+              &quot;record_kind&quot;: &quot;data&quot;,
+              &quot;side&quot;: &quot;before&quot;
+            },
+            &quot;stop_id&quot;: &quot;B&quot;
+          }
+        ],
+        &quot;frequency_start&quot;: null,
+        &quot;ride_seconds&quot;: 1800,
+        &quot;service_date&quot;: &quot;2026-06-17&quot;,
+        &quot;service_id&quot;: &quot;s&quot;,
+        &quot;sources&quot;: [
+          {
+            &quot;byte_end&quot;: 34,
+            &quot;byte_start&quot;: 28,
+            &quot;data_ordinal&quot;: 1,
+            &quot;logical_key&quot;: [
+              &quot;t&quot;
+            ],
+            &quot;member_path&quot;: &quot;trips.txt&quot;,
+            &quot;member_sha256&quot;: &quot;a8fd672d7982454ae7b8c43d45a0984bd68aa2bf3fa16f37d5d90397494eb239&quot;,
+            &quot;physical_lf_line&quot;: 2,
+            &quot;record_kind&quot;: &quot;data&quot;,
+            &quot;side&quot;: &quot;before&quot;
+          },
+          {
+            &quot;byte_end&quot;: 122,
+            &quot;byte_start&quot;: 88,
+            &quot;data_ordinal&quot;: 1,
+            &quot;logical_key&quot;: [
+              &quot;s&quot;
+            ],
+            &quot;member_path&quot;: &quot;calendar.txt&quot;,
+            &quot;member_sha256&quot;: &quot;6b103abf3809a2c1f4fb460db3c067ebf3c26c19223e2588d1af4ee86f112db3&quot;,
+            &quot;physical_lf_line&quot;: 2,
+            &quot;record_kind&quot;: &quot;data&quot;,
+            &quot;side&quot;: &quot;before&quot;
+          },
+          {
+            &quot;byte_end&quot;: 82,
+            &quot;byte_start&quot;: 58,
+            &quot;data_ordinal&quot;: 1,
+            &quot;logical_key&quot;: [
+              &quot;t&quot;,
+              &quot;1&quot;
+            ],
+            &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+            &quot;member_sha256&quot;: &quot;d6ebee1de286d66b02f29b49d33da8120651d90c08747319d0c467b523fd58ef&quot;,
+            &quot;physical_lf_line&quot;: 2,
+            &quot;record_kind&quot;: &quot;data&quot;,
+            &quot;side&quot;: &quot;before&quot;
+          },
+          {
+            &quot;byte_end&quot;: 106,
+            &quot;byte_start&quot;: 82,
+            &quot;data_ordinal&quot;: 2,
+            &quot;logical_key&quot;: [
+              &quot;t&quot;,
+              &quot;2&quot;
+            ],
+            &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+            &quot;member_sha256&quot;: &quot;d6ebee1de286d66b02f29b49d33da8120651d90c08747319d0c467b523fd58ef&quot;,
+            &quot;physical_lf_line&quot;: 3,
+            &quot;record_kind&quot;: &quot;data&quot;,
+            &quot;side&quot;: &quot;before&quot;
+          }
+        ],
+        &quot;transfers&quot;: 0,
+        &quot;trip_id&quot;: &quot;t&quot;,
+        &quot;wait_seconds&quot;: 300,
+        &quot;wheelchair_accessible&quot;: &quot;0&quot;
+      },
+      &quot;origin_stop&quot;: &quot;A&quot;,
+      &quot;scope&quot;: &quot;Single boarding only. Multi-leg journeys were not evaluated.&quot;
+    },
+    &quot;case&quot;: {
+      &quot;arrive_by&quot;: 1781685900,
+      &quot;description&quot;: &quot;&quot;,
+      &quot;destination&quot;: &quot;b&quot;,
+      &quot;horizon&quot;: {
+        &quot;end&quot;: 1781687700,
+        &quot;start&quot;: 1781682900
+      },
+      &quot;id&quot;: &quot;morning_direct&quot;,
+      &quot;max_arrival_delay_seconds&quot;: 300,
+      &quot;origin&quot;: &quot;a&quot;
+    },
+    &quot;classification&quot;: &quot;regressed&quot;,
+    &quot;existing_deadline_violation&quot;: false,
+    &quot;passed&quot;: false
+  },
+  &quot;display&quot;: {
+    &quot;after&quot;: {
+      &quot;alighting_accessibility&quot;: {
+        &quot;legacy_accessibility_id&quot;: null,
+        &quot;sources&quot;: [
+          {
+            &quot;byte_end&quot;: 75,
+            &quot;byte_start&quot;: 56,
+            &quot;data_ordinal&quot;: 2,
+            &quot;logical_key&quot;: [
+              &quot;B&quot;
+            ],
+            &quot;member_path&quot;: &quot;stops.txt&quot;,
+            &quot;member_sha256&quot;: &quot;0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf&quot;,
+            &quot;physical_lf_line&quot;: 3,
+            &quot;record_kind&quot;: &quot;data&quot;,
+            &quot;side&quot;: &quot;after&quot;
+          }
+        ],
+        &quot;standard_declared&quot;: &quot;0&quot;,
+        &quot;standard_effective&quot;: &quot;0&quot;
+      },
+      &quot;arrival&quot;: {
+        &quot;agency_local&quot;: &quot;2026-06-17T09:00:00+00:00&quot;,
+        &quot;agency_timezone&quot;: &quot;Etc/UTC&quot;,
+        &quot;utc&quot;: &quot;2026-06-17T09:00:00Z&quot;
+      },
+      &quot;boarding_accessibility&quot;: {
+        &quot;legacy_accessibility_id&quot;: null,
+        &quot;sources&quot;: [
+          {
+            &quot;byte_end&quot;: 56,
+            &quot;byte_start&quot;: 36,
+            &quot;data_ordinal&quot;: 1,
+            &quot;logical_key&quot;: [
+              &quot;A&quot;
+            ],
+            &quot;member_path&quot;: &quot;stops.txt&quot;,
+            &quot;member_sha256&quot;: &quot;0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf&quot;,
+            &quot;physical_lf_line&quot;: 2,
+            &quot;record_kind&quot;: &quot;data&quot;,
+            &quot;side&quot;: &quot;after&quot;
+          }
+        ],
+        &quot;standard_declared&quot;: &quot;0&quot;,
+        &quot;standard_effective&quot;: &quot;0&quot;
+      },
+      &quot;departure&quot;: {
+        &quot;agency_local&quot;: &quot;2026-06-17T08:00:00+00:00&quot;,
+        &quot;agency_timezone&quot;: &quot;Etc/UTC&quot;,
+        &quot;utc&quot;: &quot;2026-06-17T08:00:00Z&quot;
+      },
+      &quot;events&quot;: [
+        {
+          &quot;arrival&quot;: {
+            &quot;agency_local&quot;: &quot;2026-06-17T08:00:00+00:00&quot;,
+            &quot;agency_timezone&quot;: &quot;Etc/UTC&quot;,
+            &quot;utc&quot;: &quot;2026-06-17T08:00:00Z&quot;
+          },
+          &quot;departure&quot;: {
+            &quot;agency_local&quot;: &quot;2026-06-17T08:00:00+00:00&quot;,
+            &quot;agency_timezone&quot;: &quot;Etc/UTC&quot;,
+            &quot;utc&quot;: &quot;2026-06-17T08:00:00Z&quot;
+          },
+          &quot;estimated&quot;: false,
+          &quot;sequence&quot;: 1,
+          &quot;service_arrival_clock&quot;: &quot;08:00:00&quot;,
+          &quot;service_departure_clock&quot;: &quot;08:00:00&quot;,
+          &quot;stop_id&quot;: &quot;A&quot;
+        },
+        {
+          &quot;arrival&quot;: {
+            &quot;agency_local&quot;: &quot;2026-06-17T09:00:00+00:00&quot;,
+            &quot;agency_timezone&quot;: &quot;Etc/UTC&quot;,
+            &quot;utc&quot;: &quot;2026-06-17T09:00:00Z&quot;
+          },
+          &quot;departure&quot;: {
+            &quot;agency_local&quot;: &quot;2026-06-17T09:00:00+00:00&quot;,
+            &quot;agency_timezone&quot;: &quot;Etc/UTC&quot;,
+            &quot;utc&quot;: &quot;2026-06-17T09:00:00Z&quot;
+          },
+          &quot;estimated&quot;: false,
+          &quot;sequence&quot;: 2,
+          &quot;service_arrival_clock&quot;: &quot;09:00:00&quot;,
+          &quot;service_departure_clock&quot;: &quot;09:00:00&quot;,
+          &quot;stop_id&quot;: &quot;B&quot;
+        }
+      ],
+      &quot;service_date&quot;: &quot;2026-06-17&quot;
+    },
+    &quot;before&quot;: {
+      &quot;alighting_accessibility&quot;: {
+        &quot;legacy_accessibility_id&quot;: null,
+        &quot;sources&quot;: [
+          {
+            &quot;byte_end&quot;: 75,
+            &quot;byte_start&quot;: 56,
+            &quot;data_ordinal&quot;: 2,
+            &quot;logical_key&quot;: [
+              &quot;B&quot;
+            ],
+            &quot;member_path&quot;: &quot;stops.txt&quot;,
+            &quot;member_sha256&quot;: &quot;0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf&quot;,
+            &quot;physical_lf_line&quot;: 3,
+            &quot;record_kind&quot;: &quot;data&quot;,
+            &quot;side&quot;: &quot;before&quot;
+          }
+        ],
+        &quot;standard_declared&quot;: &quot;0&quot;,
+        &quot;standard_effective&quot;: &quot;0&quot;
+      },
+      &quot;arrival&quot;: {
+        &quot;agency_local&quot;: &quot;2026-06-17T08:30:00+00:00&quot;,
+        &quot;agency_timezone&quot;: &quot;Etc/UTC&quot;,
+        &quot;utc&quot;: &quot;2026-06-17T08:30:00Z&quot;
+      },
+      &quot;boarding_accessibility&quot;: {
+        &quot;legacy_accessibility_id&quot;: null,
+        &quot;sources&quot;: [
+          {
+            &quot;byte_end&quot;: 56,
+            &quot;byte_start&quot;: 36,
+            &quot;data_ordinal&quot;: 1,
+            &quot;logical_key&quot;: [
+              &quot;A&quot;
+            ],
+            &quot;member_path&quot;: &quot;stops.txt&quot;,
+            &quot;member_sha256&quot;: &quot;0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf&quot;,
+            &quot;physical_lf_line&quot;: 2,
+            &quot;record_kind&quot;: &quot;data&quot;,
+            &quot;side&quot;: &quot;before&quot;
+          }
+        ],
+        &quot;standard_declared&quot;: &quot;0&quot;,
+        &quot;standard_effective&quot;: &quot;0&quot;
+      },
+      &quot;departure&quot;: {
+        &quot;agency_local&quot;: &quot;2026-06-17T08:00:00+00:00&quot;,
+        &quot;agency_timezone&quot;: &quot;Etc/UTC&quot;,
+        &quot;utc&quot;: &quot;2026-06-17T08:00:00Z&quot;
+      },
+      &quot;events&quot;: [
+        {
+          &quot;arrival&quot;: {
+            &quot;agency_local&quot;: &quot;2026-06-17T08:00:00+00:00&quot;,
+            &quot;agency_timezone&quot;: &quot;Etc/UTC&quot;,
+            &quot;utc&quot;: &quot;2026-06-17T08:00:00Z&quot;
+          },
+          &quot;departure&quot;: {
+            &quot;agency_local&quot;: &quot;2026-06-17T08:00:00+00:00&quot;,
+            &quot;agency_timezone&quot;: &quot;Etc/UTC&quot;,
+            &quot;utc&quot;: &quot;2026-06-17T08:00:00Z&quot;
+          },
+          &quot;estimated&quot;: false,
+          &quot;sequence&quot;: 1,
+          &quot;service_arrival_clock&quot;: &quot;08:00:00&quot;,
+          &quot;service_departure_clock&quot;: &quot;08:00:00&quot;,
+          &quot;stop_id&quot;: &quot;A&quot;
+        },
+        {
+          &quot;arrival&quot;: {
+            &quot;agency_local&quot;: &quot;2026-06-17T08:30:00+00:00&quot;,
+            &quot;agency_timezone&quot;: &quot;Etc/UTC&quot;,
+            &quot;utc&quot;: &quot;2026-06-17T08:30:00Z&quot;
+          },
+          &quot;departure&quot;: {
+            &quot;agency_local&quot;: &quot;2026-06-17T08:30:00+00:00&quot;,
+            &quot;agency_timezone&quot;: &quot;Etc/UTC&quot;,
+            &quot;utc&quot;: &quot;2026-06-17T08:30:00Z&quot;
+          },
+          &quot;estimated&quot;: false,
+          &quot;sequence&quot;: 2,
+          &quot;service_arrival_clock&quot;: &quot;08:30:00&quot;,
+          &quot;service_departure_clock&quot;: &quot;08:30:00&quot;,
+          &quot;stop_id&quot;: &quot;B&quot;
+        }
+      ],
+      &quot;service_date&quot;: &quot;2026-06-17&quot;
+    }
+  },
+  &quot;evidence&quot;: {
+    &quot;absence_checks&quot;: [],
+    &quot;causal_claim&quot;: &quot;Related witness changes; not a unique network-wide cause.&quot;,
+    &quot;records&quot;: [
+      {
+        &quot;anchor&quot;: &quot;source-0230a0566a5a9899a5eaef80&quot;,
+        &quot;fields&quot;: {
+          &quot;end_date&quot;: &quot;20261231&quot;,
+          &quot;friday&quot;: &quot;1&quot;,
+          &quot;monday&quot;: &quot;1&quot;,
+          &quot;saturday&quot;: &quot;1&quot;,
+          &quot;service_id&quot;: &quot;s&quot;,
+          &quot;start_date&quot;: &quot;20260101&quot;,
+          &quot;sunday&quot;: &quot;1&quot;,
+          &quot;thursday&quot;: &quot;1&quot;,
+          &quot;tuesday&quot;: &quot;1&quot;,
+          &quot;wednesday&quot;: &quot;1&quot;
+        },
+        &quot;raw_text&quot;: &quot;s,1,1,1,1,1,1,1,20260101,20261231\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 122,
+          &quot;byte_start&quot;: 88,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;s&quot;
+          ],
+          &quot;member_path&quot;: &quot;calendar.txt&quot;,
+          &quot;member_sha256&quot;: &quot;6b103abf3809a2c1f4fb460db3c067ebf3c26c19223e2588d1af4ee86f112db3&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;after&quot;
+        }
+      },
+      {
+        &quot;anchor&quot;: &quot;source-112d2ba49476c74573517f12&quot;,
+        &quot;fields&quot;: {
+          &quot;agency_id&quot;: &quot;ag&quot;,
+          &quot;route_id&quot;: &quot;r&quot;,
+          &quot;route_short_name&quot;: &quot;R&quot;,
+          &quot;route_type&quot;: &quot;2&quot;
+        },
+        &quot;raw_text&quot;: &quot;r,ag,R,2\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 56,
+          &quot;byte_start&quot;: 47,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;r&quot;
+          ],
+          &quot;member_path&quot;: &quot;routes.txt&quot;,
+          &quot;member_sha256&quot;: &quot;67cdf3ee3e1d93420cd4f967831213a1179d3f3d2e276b8d715c901a1f69f7d9&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;before&quot;
+        }
+      },
+      {
+        &quot;anchor&quot;: &quot;source-12685bc230099a6dd87259f8&quot;,
+        &quot;fields&quot;: {
+          &quot;agency_id&quot;: &quot;ag&quot;,
+          &quot;agency_name&quot;: &quot;Agency&quot;,
+          &quot;agency_timezone&quot;: &quot;Etc/UTC&quot;,
+          &quot;agency_url&quot;: &quot;https://example.org&quot;
+        },
+        &quot;raw_text&quot;: &quot;ag,Agency,https://example.org,Etc/UTC\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 87,
+          &quot;byte_start&quot;: 49,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;ag&quot;
+          ],
+          &quot;member_path&quot;: &quot;agency.txt&quot;,
+          &quot;member_sha256&quot;: &quot;56af5d3202a99132d688fe9c2ba42abb3f747843ddea3f4885421be3b65a7f2d&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;after&quot;
+        }
+      },
+      {
+        &quot;anchor&quot;: &quot;source-1a01c464fe85c5bb81611208&quot;,
+        &quot;fields&quot;: {
+          &quot;agency_id&quot;: &quot;ag&quot;,
+          &quot;agency_name&quot;: &quot;Agency&quot;,
+          &quot;agency_timezone&quot;: &quot;Etc/UTC&quot;,
+          &quot;agency_url&quot;: &quot;https://example.org&quot;
+        },
+        &quot;raw_text&quot;: &quot;ag,Agency,https://example.org,Etc/UTC\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 87,
+          &quot;byte_start&quot;: 49,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;ag&quot;
+          ],
+          &quot;member_path&quot;: &quot;agency.txt&quot;,
+          &quot;member_sha256&quot;: &quot;56af5d3202a99132d688fe9c2ba42abb3f747843ddea3f4885421be3b65a7f2d&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;before&quot;
+        }
+      },
+      {
+        &quot;anchor&quot;: &quot;source-1decce3a97ec5aef7676acc2&quot;,
+        &quot;fields&quot;: {
+          &quot;agency_id&quot;: &quot;ag&quot;,
+          &quot;route_id&quot;: &quot;r&quot;,
+          &quot;route_short_name&quot;: &quot;R&quot;,
+          &quot;route_type&quot;: &quot;2&quot;
+        },
+        &quot;raw_text&quot;: &quot;r,ag,R,2\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 56,
+          &quot;byte_start&quot;: 47,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;r&quot;
+          ],
+          &quot;member_path&quot;: &quot;routes.txt&quot;,
+          &quot;member_sha256&quot;: &quot;67cdf3ee3e1d93420cd4f967831213a1179d3f3d2e276b8d715c901a1f69f7d9&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;after&quot;
+        }
+      },
+      {
+        &quot;anchor&quot;: &quot;source-326cf79967cef398addf953a&quot;,
+        &quot;fields&quot;: {
+          &quot;stop_id&quot;: &quot;A&quot;,
+          &quot;stop_lat&quot;: &quot;37.4&quot;,
+          &quot;stop_lon&quot;: &quot;-122.1&quot;,
+          &quot;stop_name&quot;: &quot;Alpha&quot;
+        },
+        &quot;raw_text&quot;: &quot;A,Alpha,37.4,-122.1\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 56,
+          &quot;byte_start&quot;: 36,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;A&quot;
+          ],
+          &quot;member_path&quot;: &quot;stops.txt&quot;,
+          &quot;member_sha256&quot;: &quot;0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;after&quot;
+        }
+      },
+      {
+        &quot;anchor&quot;: &quot;source-3cf3dcd2b1bf1f0022de1b2c&quot;,
+        &quot;fields&quot;: {
+          &quot;route_id&quot;: &quot;r&quot;,
+          &quot;service_id&quot;: &quot;s&quot;,
+          &quot;trip_id&quot;: &quot;t&quot;
+        },
+        &quot;raw_text&quot;: &quot;r,s,t\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 34,
+          &quot;byte_start&quot;: 28,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;t&quot;
+          ],
+          &quot;member_path&quot;: &quot;trips.txt&quot;,
+          &quot;member_sha256&quot;: &quot;a8fd672d7982454ae7b8c43d45a0984bd68aa2bf3fa16f37d5d90397494eb239&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;after&quot;
+        }
+      },
+      {
+        &quot;anchor&quot;: &quot;source-469e164684b0e9040e9c4482&quot;,
+        &quot;fields&quot;: {
+          &quot;stop_id&quot;: &quot;B&quot;,
+          &quot;stop_lat&quot;: &quot;37.7&quot;,
+          &quot;stop_lon&quot;: &quot;-122.4&quot;,
+          &quot;stop_name&quot;: &quot;Beta&quot;
+        },
+        &quot;raw_text&quot;: &quot;B,Beta,37.7,-122.4\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 75,
+          &quot;byte_start&quot;: 56,
+          &quot;data_ordinal&quot;: 2,
+          &quot;logical_key&quot;: [
+            &quot;B&quot;
+          ],
+          &quot;member_path&quot;: &quot;stops.txt&quot;,
+          &quot;member_sha256&quot;: &quot;0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf&quot;,
+          &quot;physical_lf_line&quot;: 3,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;before&quot;
+        }
+      },
+      {
+        &quot;anchor&quot;: &quot;source-54520ec4cd6b863f8fe7b3e5&quot;,
+        &quot;fields&quot;: {
+          &quot;feed_contact_email&quot;: &quot;maintainer@example.org&quot;,
+          &quot;feed_end_date&quot;: &quot;20261231&quot;,
+          &quot;feed_lang&quot;: &quot;en&quot;,
+          &quot;feed_publisher_name&quot;: &quot;Agency&quot;,
+          &quot;feed_publisher_url&quot;: &quot;https://example.org&quot;,
+          &quot;feed_start_date&quot;: &quot;20260101&quot;,
+          &quot;feed_version&quot;: &quot;synthetic-1&quot;
+        },
+        &quot;raw_text&quot;: &quot;Agency,https://example.org,en,20260101,20261231,synthetic-1,maintainer@example.org\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 194,
+          &quot;byte_start&quot;: 111,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;1&quot;
+          ],
+          &quot;member_path&quot;: &quot;feed_info.txt&quot;,
+          &quot;member_sha256&quot;: &quot;3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;after&quot;
+        }
+      },
+      {
+        &quot;anchor&quot;: &quot;source-59b4e05ea94e03ce7436e123&quot;,
+        &quot;fields&quot;: {
+          &quot;arrival_time&quot;: &quot;08:00:00&quot;,
+          &quot;departure_time&quot;: &quot;08:00:00&quot;,
+          &quot;stop_id&quot;: &quot;A&quot;,
+          &quot;stop_sequence&quot;: &quot;1&quot;,
+          &quot;trip_id&quot;: &quot;t&quot;
+        },
+        &quot;raw_text&quot;: &quot;t,08:00:00,08:00:00,A,1\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 82,
+          &quot;byte_start&quot;: 58,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;t&quot;,
+            &quot;1&quot;
+          ],
+          &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+          &quot;member_sha256&quot;: &quot;d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;after&quot;
+        }
+      },
+      {
+        &quot;anchor&quot;: &quot;source-787e7a3995c867c98247c6f3&quot;,
+        &quot;fields&quot;: {
+          &quot;arrival_time&quot;: &quot;09:00:00&quot;,
+          &quot;departure_time&quot;: &quot;09:00:00&quot;,
+          &quot;stop_id&quot;: &quot;B&quot;,
+          &quot;stop_sequence&quot;: &quot;2&quot;,
+          &quot;trip_id&quot;: &quot;t&quot;
+        },
+        &quot;raw_text&quot;: &quot;t,09:00:00,09:00:00,B,2\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 106,
+          &quot;byte_start&quot;: 82,
+          &quot;data_ordinal&quot;: 2,
+          &quot;logical_key&quot;: [
+            &quot;t&quot;,
+            &quot;2&quot;
+          ],
+          &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+          &quot;member_sha256&quot;: &quot;d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67&quot;,
+          &quot;physical_lf_line&quot;: 3,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;after&quot;
+        }
+      },
+      {
+        &quot;anchor&quot;: &quot;source-7f5cdf4d772cb07c966cbda4&quot;,
+        &quot;fields&quot;: {
+          &quot;arrival_time&quot;: &quot;08:30:00&quot;,
+          &quot;departure_time&quot;: &quot;08:30:00&quot;,
+          &quot;stop_id&quot;: &quot;B&quot;,
+          &quot;stop_sequence&quot;: &quot;2&quot;,
+          &quot;trip_id&quot;: &quot;t&quot;
+        },
+        &quot;raw_text&quot;: &quot;t,08:30:00,08:30:00,B,2\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 106,
+          &quot;byte_start&quot;: 82,
+          &quot;data_ordinal&quot;: 2,
+          &quot;logical_key&quot;: [
+            &quot;t&quot;,
+            &quot;2&quot;
+          ],
+          &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+          &quot;member_sha256&quot;: &quot;d6ebee1de286d66b02f29b49d33da8120651d90c08747319d0c467b523fd58ef&quot;,
+          &quot;physical_lf_line&quot;: 3,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;before&quot;
+        }
+      },
+      {
+        &quot;anchor&quot;: &quot;source-874f1030bd3612bd19a8e3ba&quot;,
+        &quot;fields&quot;: {
+          &quot;end_date&quot;: &quot;20261231&quot;,
+          &quot;friday&quot;: &quot;1&quot;,
+          &quot;monday&quot;: &quot;1&quot;,
+          &quot;saturday&quot;: &quot;1&quot;,
+          &quot;service_id&quot;: &quot;s&quot;,
+          &quot;start_date&quot;: &quot;20260101&quot;,
+          &quot;sunday&quot;: &quot;1&quot;,
+          &quot;thursday&quot;: &quot;1&quot;,
+          &quot;tuesday&quot;: &quot;1&quot;,
+          &quot;wednesday&quot;: &quot;1&quot;
+        },
+        &quot;raw_text&quot;: &quot;s,1,1,1,1,1,1,1,20260101,20261231\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 122,
+          &quot;byte_start&quot;: 88,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;s&quot;
+          ],
+          &quot;member_path&quot;: &quot;calendar.txt&quot;,
+          &quot;member_sha256&quot;: &quot;6b103abf3809a2c1f4fb460db3c067ebf3c26c19223e2588d1af4ee86f112db3&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;before&quot;
+        }
+      },
+      {
+        &quot;anchor&quot;: &quot;source-ba257c2090677535b1ea5033&quot;,
+        &quot;fields&quot;: {
+          &quot;stop_id&quot;: &quot;A&quot;,
+          &quot;stop_lat&quot;: &quot;37.4&quot;,
+          &quot;stop_lon&quot;: &quot;-122.1&quot;,
+          &quot;stop_name&quot;: &quot;Alpha&quot;
+        },
+        &quot;raw_text&quot;: &quot;A,Alpha,37.4,-122.1\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 56,
+          &quot;byte_start&quot;: 36,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;A&quot;
+          ],
+          &quot;member_path&quot;: &quot;stops.txt&quot;,
+          &quot;member_sha256&quot;: &quot;0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;before&quot;
+        }
+      },
+      {
+        &quot;anchor&quot;: &quot;source-cfe5bd13c8f50b42459e166a&quot;,
+        &quot;fields&quot;: {
+          &quot;feed_contact_email&quot;: &quot;maintainer@example.org&quot;,
+          &quot;feed_end_date&quot;: &quot;20261231&quot;,
+          &quot;feed_lang&quot;: &quot;en&quot;,
+          &quot;feed_publisher_name&quot;: &quot;Agency&quot;,
+          &quot;feed_publisher_url&quot;: &quot;https://example.org&quot;,
+          &quot;feed_start_date&quot;: &quot;20260101&quot;,
+          &quot;feed_version&quot;: &quot;synthetic-1&quot;
+        },
+        &quot;raw_text&quot;: &quot;Agency,https://example.org,en,20260101,20261231,synthetic-1,maintainer@example.org\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 194,
+          &quot;byte_start&quot;: 111,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;1&quot;
+          ],
+          &quot;member_path&quot;: &quot;feed_info.txt&quot;,
+          &quot;member_sha256&quot;: &quot;3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;before&quot;
+        }
+      },
+      {
+        &quot;anchor&quot;: &quot;source-d1c853d4f0556f8621049ae3&quot;,
+        &quot;fields&quot;: {
+          &quot;stop_id&quot;: &quot;B&quot;,
+          &quot;stop_lat&quot;: &quot;37.7&quot;,
+          &quot;stop_lon&quot;: &quot;-122.4&quot;,
+          &quot;stop_name&quot;: &quot;Beta&quot;
+        },
+        &quot;raw_text&quot;: &quot;B,Beta,37.7,-122.4\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 75,
+          &quot;byte_start&quot;: 56,
+          &quot;data_ordinal&quot;: 2,
+          &quot;logical_key&quot;: [
+            &quot;B&quot;
+          ],
+          &quot;member_path&quot;: &quot;stops.txt&quot;,
+          &quot;member_sha256&quot;: &quot;0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf&quot;,
+          &quot;physical_lf_line&quot;: 3,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;after&quot;
+        }
+      },
+      {
+        &quot;anchor&quot;: &quot;source-e6d7e3a989a04966fc32cd10&quot;,
+        &quot;fields&quot;: {
+          &quot;arrival_time&quot;: &quot;08:00:00&quot;,
+          &quot;departure_time&quot;: &quot;08:00:00&quot;,
+          &quot;stop_id&quot;: &quot;A&quot;,
+          &quot;stop_sequence&quot;: &quot;1&quot;,
+          &quot;trip_id&quot;: &quot;t&quot;
+        },
+        &quot;raw_text&quot;: &quot;t,08:00:00,08:00:00,A,1\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 82,
+          &quot;byte_start&quot;: 58,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;t&quot;,
+            &quot;1&quot;
+          ],
+          &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+          &quot;member_sha256&quot;: &quot;d6ebee1de286d66b02f29b49d33da8120651d90c08747319d0c467b523fd58ef&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;before&quot;
+        }
+      },
+      {
+        &quot;anchor&quot;: &quot;source-f3d1eecdb72bfbeeed0615ee&quot;,
+        &quot;fields&quot;: {
+          &quot;route_id&quot;: &quot;r&quot;,
+          &quot;service_id&quot;: &quot;s&quot;,
+          &quot;trip_id&quot;: &quot;t&quot;
+        },
+        &quot;raw_text&quot;: &quot;r,s,t\n&quot;,
+        &quot;source&quot;: {
+          &quot;byte_end&quot;: 34,
+          &quot;byte_start&quot;: 28,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;t&quot;
+          ],
+          &quot;member_path&quot;: &quot;trips.txt&quot;,
+          &quot;member_sha256&quot;: &quot;a8fd672d7982454ae7b8c43d45a0984bd68aa2bf3fa16f37d5d90397494eb239&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;before&quot;
+        }
+      }
+    ],
+    &quot;related_changes&quot;: [
+      {
+        &quot;after_anchor&quot;: &quot;source-787e7a3995c867c98247c6f3&quot;,
+        &quot;before_anchor&quot;: &quot;source-7f5cdf4d772cb07c966cbda4&quot;,
+        &quot;changed_fields&quot;: [
+          &quot;arrival_time&quot;,
+          &quot;departure_time&quot;
+        ],
+        &quot;logical_key&quot;: [
+          &quot;t&quot;,
+          &quot;2&quot;
+        ],
+        &quot;member_path&quot;: &quot;stop_times.txt&quot;
+      }
+    ],
+    &quot;replay&quot;: {
+      &quot;arrival_delta_seconds&quot;: 1800,
+      &quot;arrival_utc&quot;: 1781686800,
+      &quot;departure_utc&quot;: 1781683200,
+      &quot;permitted_within_horizon&quot;: true,
+      &quot;reasons&quot;: [],
+      &quot;sources&quot;: [
+        {
+          &quot;byte_end&quot;: 34,
+          &quot;byte_start&quot;: 28,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;t&quot;
+          ],
+          &quot;member_path&quot;: &quot;trips.txt&quot;,
+          &quot;member_sha256&quot;: &quot;a8fd672d7982454ae7b8c43d45a0984bd68aa2bf3fa16f37d5d90397494eb239&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;after&quot;
+        },
+        {
+          &quot;byte_end&quot;: 122,
+          &quot;byte_start&quot;: 88,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;s&quot;
+          ],
+          &quot;member_path&quot;: &quot;calendar.txt&quot;,
+          &quot;member_sha256&quot;: &quot;6b103abf3809a2c1f4fb460db3c067ebf3c26c19223e2588d1af4ee86f112db3&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;after&quot;
+        },
+        {
+          &quot;byte_end&quot;: 82,
+          &quot;byte_start&quot;: 58,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;t&quot;,
+            &quot;1&quot;
+          ],
+          &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+          &quot;member_sha256&quot;: &quot;d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;after&quot;
+        },
+        {
+          &quot;byte_end&quot;: 106,
+          &quot;byte_start&quot;: 82,
+          &quot;data_ordinal&quot;: 2,
+          &quot;logical_key&quot;: [
+            &quot;t&quot;,
+            &quot;2&quot;
+          ],
+          &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+          &quot;member_sha256&quot;: &quot;d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67&quot;,
+          &quot;physical_lf_line&quot;: 3,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;after&quot;
+        }
+      ],
+      &quot;status&quot;: &quot;replayed&quot;
+    }
+  },
+  &quot;expanded_events&quot;: {
+    &quot;after&quot;: 2,
+    &quot;before&quot;: 2
+  },
+  &quot;id&quot;: &quot;morning_direct&quot;,
+  &quot;service_dates&quot;: [
+    &quot;2026-06-17&quot;
+  ],
+  &quot;status&quot;: &quot;fail&quot;
+}</pre></details></section><section><h2>Diagnostics</h2><pre>[]</pre></section><details id="source-0230a0566a5a9899a5eaef80"><summary>after/calendar.txt LF line 2</summary><pre>{
+  &quot;byte_end&quot;: 122,
+  &quot;byte_start&quot;: 88,
+  &quot;data_ordinal&quot;: 1,
+  &quot;logical_key&quot;: [
+    &quot;s&quot;
+  ],
+  &quot;member_path&quot;: &quot;calendar.txt&quot;,
+  &quot;member_sha256&quot;: &quot;6b103abf3809a2c1f4fb460db3c067ebf3c26c19223e2588d1af4ee86f112db3&quot;,
+  &quot;physical_lf_line&quot;: 2,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;after&quot;
+}</pre><pre>s,1,1,1,1,1,1,1,20260101,20261231
+</pre></details><details id="source-112d2ba49476c74573517f12"><summary>before/routes.txt LF line 2</summary><pre>{
+  &quot;byte_end&quot;: 56,
+  &quot;byte_start&quot;: 47,
+  &quot;data_ordinal&quot;: 1,
+  &quot;logical_key&quot;: [
+    &quot;r&quot;
+  ],
+  &quot;member_path&quot;: &quot;routes.txt&quot;,
+  &quot;member_sha256&quot;: &quot;67cdf3ee3e1d93420cd4f967831213a1179d3f3d2e276b8d715c901a1f69f7d9&quot;,
+  &quot;physical_lf_line&quot;: 2,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;before&quot;
+}</pre><pre>r,ag,R,2
+</pre></details><details id="source-12685bc230099a6dd87259f8"><summary>after/agency.txt LF line 2</summary><pre>{
+  &quot;byte_end&quot;: 87,
+  &quot;byte_start&quot;: 49,
+  &quot;data_ordinal&quot;: 1,
+  &quot;logical_key&quot;: [
+    &quot;ag&quot;
+  ],
+  &quot;member_path&quot;: &quot;agency.txt&quot;,
+  &quot;member_sha256&quot;: &quot;56af5d3202a99132d688fe9c2ba42abb3f747843ddea3f4885421be3b65a7f2d&quot;,
+  &quot;physical_lf_line&quot;: 2,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;after&quot;
+}</pre><pre>ag,Agency,https://example.org,Etc/UTC
+</pre></details><details id="source-1a01c464fe85c5bb81611208"><summary>before/agency.txt LF line 2</summary><pre>{
+  &quot;byte_end&quot;: 87,
+  &quot;byte_start&quot;: 49,
+  &quot;data_ordinal&quot;: 1,
+  &quot;logical_key&quot;: [
+    &quot;ag&quot;
+  ],
+  &quot;member_path&quot;: &quot;agency.txt&quot;,
+  &quot;member_sha256&quot;: &quot;56af5d3202a99132d688fe9c2ba42abb3f747843ddea3f4885421be3b65a7f2d&quot;,
+  &quot;physical_lf_line&quot;: 2,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;before&quot;
+}</pre><pre>ag,Agency,https://example.org,Etc/UTC
+</pre></details><details id="source-1decce3a97ec5aef7676acc2"><summary>after/routes.txt LF line 2</summary><pre>{
+  &quot;byte_end&quot;: 56,
+  &quot;byte_start&quot;: 47,
+  &quot;data_ordinal&quot;: 1,
+  &quot;logical_key&quot;: [
+    &quot;r&quot;
+  ],
+  &quot;member_path&quot;: &quot;routes.txt&quot;,
+  &quot;member_sha256&quot;: &quot;67cdf3ee3e1d93420cd4f967831213a1179d3f3d2e276b8d715c901a1f69f7d9&quot;,
+  &quot;physical_lf_line&quot;: 2,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;after&quot;
+}</pre><pre>r,ag,R,2
+</pre></details><details id="source-326cf79967cef398addf953a"><summary>after/stops.txt LF line 2</summary><pre>{
+  &quot;byte_end&quot;: 56,
+  &quot;byte_start&quot;: 36,
+  &quot;data_ordinal&quot;: 1,
+  &quot;logical_key&quot;: [
+    &quot;A&quot;
+  ],
+  &quot;member_path&quot;: &quot;stops.txt&quot;,
+  &quot;member_sha256&quot;: &quot;0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf&quot;,
+  &quot;physical_lf_line&quot;: 2,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;after&quot;
+}</pre><pre>A,Alpha,37.4,-122.1
+</pre></details><details id="source-3cf3dcd2b1bf1f0022de1b2c"><summary>after/trips.txt LF line 2</summary><pre>{
+  &quot;byte_end&quot;: 34,
+  &quot;byte_start&quot;: 28,
+  &quot;data_ordinal&quot;: 1,
+  &quot;logical_key&quot;: [
+    &quot;t&quot;
+  ],
+  &quot;member_path&quot;: &quot;trips.txt&quot;,
+  &quot;member_sha256&quot;: &quot;a8fd672d7982454ae7b8c43d45a0984bd68aa2bf3fa16f37d5d90397494eb239&quot;,
+  &quot;physical_lf_line&quot;: 2,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;after&quot;
+}</pre><pre>r,s,t
+</pre></details><details id="source-469e164684b0e9040e9c4482"><summary>before/stops.txt LF line 3</summary><pre>{
+  &quot;byte_end&quot;: 75,
+  &quot;byte_start&quot;: 56,
+  &quot;data_ordinal&quot;: 2,
+  &quot;logical_key&quot;: [
+    &quot;B&quot;
+  ],
+  &quot;member_path&quot;: &quot;stops.txt&quot;,
+  &quot;member_sha256&quot;: &quot;0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf&quot;,
+  &quot;physical_lf_line&quot;: 3,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;before&quot;
+}</pre><pre>B,Beta,37.7,-122.4
+</pre></details><details id="source-54520ec4cd6b863f8fe7b3e5"><summary>after/feed_info.txt LF line 2</summary><pre>{
+  &quot;byte_end&quot;: 194,
+  &quot;byte_start&quot;: 111,
+  &quot;data_ordinal&quot;: 1,
+  &quot;logical_key&quot;: [
+    &quot;1&quot;
+  ],
+  &quot;member_path&quot;: &quot;feed_info.txt&quot;,
+  &quot;member_sha256&quot;: &quot;3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914&quot;,
+  &quot;physical_lf_line&quot;: 2,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;after&quot;
+}</pre><pre>Agency,https://example.org,en,20260101,20261231,synthetic-1,maintainer@example.org
+</pre></details><details id="source-59b4e05ea94e03ce7436e123"><summary>after/stop_times.txt LF line 2</summary><pre>{
+  &quot;byte_end&quot;: 82,
+  &quot;byte_start&quot;: 58,
+  &quot;data_ordinal&quot;: 1,
+  &quot;logical_key&quot;: [
+    &quot;t&quot;,
+    &quot;1&quot;
+  ],
+  &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+  &quot;member_sha256&quot;: &quot;d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67&quot;,
+  &quot;physical_lf_line&quot;: 2,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;after&quot;
+}</pre><pre>t,08:00:00,08:00:00,A,1
+</pre></details><details id="source-787e7a3995c867c98247c6f3"><summary>after/stop_times.txt LF line 3</summary><pre>{
+  &quot;byte_end&quot;: 106,
+  &quot;byte_start&quot;: 82,
+  &quot;data_ordinal&quot;: 2,
+  &quot;logical_key&quot;: [
+    &quot;t&quot;,
+    &quot;2&quot;
+  ],
+  &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+  &quot;member_sha256&quot;: &quot;d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67&quot;,
+  &quot;physical_lf_line&quot;: 3,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;after&quot;
+}</pre><pre>t,09:00:00,09:00:00,B,2
+</pre></details><details id="source-7f5cdf4d772cb07c966cbda4"><summary>before/stop_times.txt LF line 3</summary><pre>{
+  &quot;byte_end&quot;: 106,
+  &quot;byte_start&quot;: 82,
+  &quot;data_ordinal&quot;: 2,
+  &quot;logical_key&quot;: [
+    &quot;t&quot;,
+    &quot;2&quot;
+  ],
+  &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+  &quot;member_sha256&quot;: &quot;d6ebee1de286d66b02f29b49d33da8120651d90c08747319d0c467b523fd58ef&quot;,
+  &quot;physical_lf_line&quot;: 3,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;before&quot;
+}</pre><pre>t,08:30:00,08:30:00,B,2
+</pre></details><details id="source-874f1030bd3612bd19a8e3ba"><summary>before/calendar.txt LF line 2</summary><pre>{
+  &quot;byte_end&quot;: 122,
+  &quot;byte_start&quot;: 88,
+  &quot;data_ordinal&quot;: 1,
+  &quot;logical_key&quot;: [
+    &quot;s&quot;
+  ],
+  &quot;member_path&quot;: &quot;calendar.txt&quot;,
+  &quot;member_sha256&quot;: &quot;6b103abf3809a2c1f4fb460db3c067ebf3c26c19223e2588d1af4ee86f112db3&quot;,
+  &quot;physical_lf_line&quot;: 2,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;before&quot;
+}</pre><pre>s,1,1,1,1,1,1,1,20260101,20261231
+</pre></details><details id="source-ba257c2090677535b1ea5033"><summary>before/stops.txt LF line 2</summary><pre>{
+  &quot;byte_end&quot;: 56,
+  &quot;byte_start&quot;: 36,
+  &quot;data_ordinal&quot;: 1,
+  &quot;logical_key&quot;: [
+    &quot;A&quot;
+  ],
+  &quot;member_path&quot;: &quot;stops.txt&quot;,
+  &quot;member_sha256&quot;: &quot;0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf&quot;,
+  &quot;physical_lf_line&quot;: 2,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;before&quot;
+}</pre><pre>A,Alpha,37.4,-122.1
+</pre></details><details id="source-cfe5bd13c8f50b42459e166a"><summary>before/feed_info.txt LF line 2</summary><pre>{
+  &quot;byte_end&quot;: 194,
+  &quot;byte_start&quot;: 111,
+  &quot;data_ordinal&quot;: 1,
+  &quot;logical_key&quot;: [
+    &quot;1&quot;
+  ],
+  &quot;member_path&quot;: &quot;feed_info.txt&quot;,
+  &quot;member_sha256&quot;: &quot;3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914&quot;,
+  &quot;physical_lf_line&quot;: 2,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;before&quot;
+}</pre><pre>Agency,https://example.org,en,20260101,20261231,synthetic-1,maintainer@example.org
+</pre></details><details id="source-d1c853d4f0556f8621049ae3"><summary>after/stops.txt LF line 3</summary><pre>{
+  &quot;byte_end&quot;: 75,
+  &quot;byte_start&quot;: 56,
+  &quot;data_ordinal&quot;: 2,
+  &quot;logical_key&quot;: [
+    &quot;B&quot;
+  ],
+  &quot;member_path&quot;: &quot;stops.txt&quot;,
+  &quot;member_sha256&quot;: &quot;0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf&quot;,
+  &quot;physical_lf_line&quot;: 3,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;after&quot;
+}</pre><pre>B,Beta,37.7,-122.4
+</pre></details><details id="source-e6d7e3a989a04966fc32cd10"><summary>before/stop_times.txt LF line 2</summary><pre>{
+  &quot;byte_end&quot;: 82,
+  &quot;byte_start&quot;: 58,
+  &quot;data_ordinal&quot;: 1,
+  &quot;logical_key&quot;: [
+    &quot;t&quot;,
+    &quot;1&quot;
+  ],
+  &quot;member_path&quot;: &quot;stop_times.txt&quot;,
+  &quot;member_sha256&quot;: &quot;d6ebee1de286d66b02f29b49d33da8120651d90c08747319d0c467b523fd58ef&quot;,
+  &quot;physical_lf_line&quot;: 2,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;before&quot;
+}</pre><pre>t,08:00:00,08:00:00,A,1
+</pre></details><details id="source-f3d1eecdb72bfbeeed0615ee"><summary>before/trips.txt LF line 2</summary><pre>{
+  &quot;byte_end&quot;: 34,
+  &quot;byte_start&quot;: 28,
+  &quot;data_ordinal&quot;: 1,
+  &quot;logical_key&quot;: [
+    &quot;t&quot;
+  ],
+  &quot;member_path&quot;: &quot;trips.txt&quot;,
+  &quot;member_sha256&quot;: &quot;a8fd672d7982454ae7b8c43d45a0984bd68aa2bf3fa16f37d5d90397494eb239&quot;,
+  &quot;physical_lf_line&quot;: 2,
+  &quot;record_kind&quot;: &quot;data&quot;,
+  &quot;side&quot;: &quot;before&quot;
+}</pre><pre>r,s,t
+</pre></details><details><summary>Input hashes and capability inventory</summary><pre>{
+  &quot;canonical_digest&quot;: &quot;946cfebc3f6054c628c0a606124c8e11d2a36a5b7c5920cb80613c34af69ce2a&quot;,
+  &quot;common_max_expanded_clock&quot;: 32400,
+  &quot;coverage&quot;: {
+    &quot;after&quot;: {
+      &quot;end_date&quot;: &quot;2026-12-31&quot;,
+      &quot;origin&quot;: &quot;publisher&quot;,
+      &quot;sources&quot;: [
+        {
+          &quot;byte_end&quot;: 194,
+          &quot;byte_start&quot;: 111,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;1&quot;
+          ],
+          &quot;member_path&quot;: &quot;feed_info.txt&quot;,
+          &quot;member_sha256&quot;: &quot;3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;after&quot;
+        }
+      ],
+      &quot;start_date&quot;: &quot;2026-01-01&quot;
+    },
+    &quot;before&quot;: {
+      &quot;end_date&quot;: &quot;2026-12-31&quot;,
+      &quot;origin&quot;: &quot;publisher&quot;,
+      &quot;sources&quot;: [
+        {
+          &quot;byte_end&quot;: 194,
+          &quot;byte_start&quot;: 111,
+          &quot;data_ordinal&quot;: 1,
+          &quot;logical_key&quot;: [
+            &quot;1&quot;
+          ],
+          &quot;member_path&quot;: &quot;feed_info.txt&quot;,
+          &quot;member_sha256&quot;: &quot;3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914&quot;,
+          &quot;physical_lf_line&quot;: 2,
+          &quot;record_kind&quot;: &quot;data&quot;,
+          &quot;side&quot;: &quot;before&quot;
+        }
+      ],
+      &quot;start_date&quot;: &quot;2026-01-01&quot;
+    }
+  },
+  &quot;exit_code&quot;: 1,
+  &quot;feeds&quot;: {
+    &quot;after&quot;: {
+      &quot;archive_sha256&quot;: &quot;4eca5a3d99e0deacd05c5197933a1b26e2dfc357131e82e80bd203dc04b36e1f&quot;,
+      &quot;capability_inventory&quot;: {
+        &quot;agency.txt&quot;: {
+          &quot;columns&quot;: [
+            &quot;agency_id&quot;,
+            &quot;agency_name&quot;,
+            &quot;agency_url&quot;,
+            &quot;agency_timezone&quot;
+          ],
+          &quot;disposition&quot;: &quot;modeled_and_metadata&quot;,
+          &quot;rows&quot;: 1
+        },
+        &quot;calendar.txt&quot;: {
+          &quot;columns&quot;: [
+            &quot;service_id&quot;,
+            &quot;monday&quot;,
+            &quot;tuesday&quot;,
+            &quot;wednesday&quot;,
+            &quot;thursday&quot;,
+            &quot;friday&quot;,
+            &quot;saturday&quot;,
+            &quot;sunday&quot;,
+            &quot;start_date&quot;,
+            &quot;end_date&quot;
+          ],
+          &quot;disposition&quot;: &quot;modeled_and_metadata&quot;,
+          &quot;rows&quot;: 1
+        },
+        &quot;feed_info.txt&quot;: {
+          &quot;columns&quot;: [
+            &quot;feed_publisher_name&quot;,
+            &quot;feed_publisher_url&quot;,
+            &quot;feed_lang&quot;,
+            &quot;feed_start_date&quot;,
+            &quot;feed_end_date&quot;,
+            &quot;feed_version&quot;,
+            &quot;feed_contact_email&quot;
+          ],
+          &quot;disposition&quot;: &quot;modeled_and_metadata&quot;,
+          &quot;rows&quot;: 1
+        },
+        &quot;routes.txt&quot;: {
+          &quot;columns&quot;: [
+            &quot;route_id&quot;,
+            &quot;agency_id&quot;,
+            &quot;route_short_name&quot;,
+            &quot;route_type&quot;
+          ],
+          &quot;disposition&quot;: &quot;modeled_and_metadata&quot;,
+          &quot;rows&quot;: 1
+        },
+        &quot;stop_times.txt&quot;: {
+          &quot;columns&quot;: [
+            &quot;trip_id&quot;,
+            &quot;arrival_time&quot;,
+            &quot;departure_time&quot;,
+            &quot;stop_id&quot;,
+            &quot;stop_sequence&quot;
+          ],
+          &quot;disposition&quot;: &quot;modeled_and_metadata&quot;,
+          &quot;rows&quot;: 2
+        },
+        &quot;stops.txt&quot;: {
+          &quot;columns&quot;: [
+            &quot;stop_id&quot;,
+            &quot;stop_name&quot;,
+            &quot;stop_lat&quot;,
+            &quot;stop_lon&quot;
+          ],
+          &quot;disposition&quot;: &quot;modeled_and_metadata&quot;,
+          &quot;rows&quot;: 2
+        },
+        &quot;trips.txt&quot;: {
+          &quot;columns&quot;: [
+            &quot;route_id&quot;,
+            &quot;service_id&quot;,
+            &quot;trip_id&quot;
+          ],
+          &quot;disposition&quot;: &quot;modeled_and_metadata&quot;,
+          &quot;rows&quot;: 1
+        },
+        &quot;versions&quot;: {
+          &quot;registry&quot;: &quot;trillium-reviewed-v1&quot;,
+          &quot;registry_sha256&quot;: &quot;eb767e9201f5bd3e14e45c6e7f301c38ed2ee81d9f4e5a60dd176304f58a98b5&quot;,
+          &quot;schema&quot;: &quot;scheduled-direct-v0.1&quot;,
+          &quot;schema_sha256&quot;: &quot;6f1d789dd77dc57c581fb0cedb325a52e6fed545734448c864acebace781324c&quot;
+        }
+      },
+      &quot;excluded_members&quot;: [],
+      &quot;members&quot;: {
+        &quot;agency.txt&quot;: &quot;56af5d3202a99132d688fe9c2ba42abb3f747843ddea3f4885421be3b65a7f2d&quot;,
+        &quot;calendar.txt&quot;: &quot;6b103abf3809a2c1f4fb460db3c067ebf3c26c19223e2588d1af4ee86f112db3&quot;,
+        &quot;feed_info.txt&quot;: &quot;3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914&quot;,
+        &quot;routes.txt&quot;: &quot;67cdf3ee3e1d93420cd4f967831213a1179d3f3d2e276b8d715c901a1f69f7d9&quot;,
+        &quot;stop_times.txt&quot;: &quot;d1510bbd01c3e9d741b2048c824d3b881151b503482498376a0b32ec47697f67&quot;,
+        &quot;stops.txt&quot;: &quot;0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf&quot;,
+        &quot;trips.txt&quot;: &quot;a8fd672d7982454ae7b8c43d45a0984bd68aa2bf3fa16f37d5d90397494eb239&quot;
+      }
+    },
+    &quot;before&quot;: {
+      &quot;archive_sha256&quot;: &quot;9da0bc6153149c3727cd77f31515a1697ef96411a466cf8e19c6d0aa2549c3f1&quot;,
+      &quot;capability_inventory&quot;: {
+        &quot;agency.txt&quot;: {
+          &quot;columns&quot;: [
+            &quot;agency_id&quot;,
+            &quot;agency_name&quot;,
+            &quot;agency_url&quot;,
+            &quot;agency_timezone&quot;
+          ],
+          &quot;disposition&quot;: &quot;modeled_and_metadata&quot;,
+          &quot;rows&quot;: 1
+        },
+        &quot;calendar.txt&quot;: {
+          &quot;columns&quot;: [
+            &quot;service_id&quot;,
+            &quot;monday&quot;,
+            &quot;tuesday&quot;,
+            &quot;wednesday&quot;,
+            &quot;thursday&quot;,
+            &quot;friday&quot;,
+            &quot;saturday&quot;,
+            &quot;sunday&quot;,
+            &quot;start_date&quot;,
+            &quot;end_date&quot;
+          ],
+          &quot;disposition&quot;: &quot;modeled_and_metadata&quot;,
+          &quot;rows&quot;: 1
+        },
+        &quot;feed_info.txt&quot;: {
+          &quot;columns&quot;: [
+            &quot;feed_publisher_name&quot;,
+            &quot;feed_publisher_url&quot;,
+            &quot;feed_lang&quot;,
+            &quot;feed_start_date&quot;,
+            &quot;feed_end_date&quot;,
+            &quot;feed_version&quot;,
+            &quot;feed_contact_email&quot;
+          ],
+          &quot;disposition&quot;: &quot;modeled_and_metadata&quot;,
+          &quot;rows&quot;: 1
+        },
+        &quot;routes.txt&quot;: {
+          &quot;columns&quot;: [
+            &quot;route_id&quot;,
+            &quot;agency_id&quot;,
+            &quot;route_short_name&quot;,
+            &quot;route_type&quot;
+          ],
+          &quot;disposition&quot;: &quot;modeled_and_metadata&quot;,
+          &quot;rows&quot;: 1
+        },
+        &quot;stop_times.txt&quot;: {
+          &quot;columns&quot;: [
+            &quot;trip_id&quot;,
+            &quot;arrival_time&quot;,
+            &quot;departure_time&quot;,
+            &quot;stop_id&quot;,
+            &quot;stop_sequence&quot;
+          ],
+          &quot;disposition&quot;: &quot;modeled_and_metadata&quot;,
+          &quot;rows&quot;: 2
+        },
+        &quot;stops.txt&quot;: {
+          &quot;columns&quot;: [
+            &quot;stop_id&quot;,
+            &quot;stop_name&quot;,
+            &quot;stop_lat&quot;,
+            &quot;stop_lon&quot;
+          ],
+          &quot;disposition&quot;: &quot;modeled_and_metadata&quot;,
+          &quot;rows&quot;: 2
+        },
+        &quot;trips.txt&quot;: {
+          &quot;columns&quot;: [
+            &quot;route_id&quot;,
+            &quot;service_id&quot;,
+            &quot;trip_id&quot;
+          ],
+          &quot;disposition&quot;: &quot;modeled_and_metadata&quot;,
+          &quot;rows&quot;: 1
+        },
+        &quot;versions&quot;: {
+          &quot;registry&quot;: &quot;trillium-reviewed-v1&quot;,
+          &quot;registry_sha256&quot;: &quot;eb767e9201f5bd3e14e45c6e7f301c38ed2ee81d9f4e5a60dd176304f58a98b5&quot;,
+          &quot;schema&quot;: &quot;scheduled-direct-v0.1&quot;,
+          &quot;schema_sha256&quot;: &quot;6f1d789dd77dc57c581fb0cedb325a52e6fed545734448c864acebace781324c&quot;
+        }
+      },
+      &quot;excluded_members&quot;: [],
+      &quot;members&quot;: {
+        &quot;agency.txt&quot;: &quot;56af5d3202a99132d688fe9c2ba42abb3f747843ddea3f4885421be3b65a7f2d&quot;,
+        &quot;calendar.txt&quot;: &quot;6b103abf3809a2c1f4fb460db3c067ebf3c26c19223e2588d1af4ee86f112db3&quot;,
+        &quot;feed_info.txt&quot;: &quot;3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914&quot;,
+        &quot;routes.txt&quot;: &quot;67cdf3ee3e1d93420cd4f967831213a1179d3f3d2e276b8d715c901a1f69f7d9&quot;,
+        &quot;stop_times.txt&quot;: &quot;d6ebee1de286d66b02f29b49d33da8120651d90c08747319d0c467b523fd58ef&quot;,
+        &quot;stops.txt&quot;: &quot;0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf&quot;,
+        &quot;trips.txt&quot;: &quot;a8fd672d7982454ae7b8c43d45a0984bd68aa2bf3fa16f37d5d90397494eb239&quot;
+      }
+    }
+  },
+  &quot;gtfs_reference_revision&quot;: &quot;2026-04-27&quot;,
+  &quot;limits&quot;: {
+    &quot;archive_bytes&quot;: 134217728,
+    &quot;cases&quot;: 100,
+    &quot;expanded_events&quot;: 250000,
+    &quot;field_bytes&quot;: 1048576,
+    &quot;member_bytes&quot;: 134217728,
+    &quot;members&quot;: 128,
+    &quot;total_bytes&quot;: 536870912
+  },
+  &quot;model&quot;: &quot;scheduled-direct-v0&quot;,
+  &quot;non_evaluated&quot;: [
+    &quot;multi-leg journeys&quot;,
+    &quot;transfers and holding&quot;,
+    &quot;station access/pathways&quot;,
+    &quot;accessibility routing&quot;,
+    &quot;fares&quot;,
+    &quot;realtime&quot;,
+    &quot;cross-trip block continuations&quot;
+  ],
+  &quot;origin_urls&quot;: {},
+  &quot;schema_version&quot;: &quot;1&quot;,
+  &quot;scope&quot;: &quot;Single boarding only. Multi-leg journeys were not evaluated.&quot;,
+  &quot;status&quot;: &quot;evaluated&quot;,
+  &quot;suite_sha256&quot;: &quot;fb0462c1e79250d56420257e30dada8da7296d232f607b6484f3a54b64cd92e9&quot;,
+  &quot;timezone&quot;: {
+    &quot;data_sha256&quot;: &quot;fddce1e648a1732ac29afd9a16151b2973cdf082e7ec0c690f7e42be6b598b93&quot;,
+    &quot;package_version&quot;: &quot;2026.5&quot;,
+    &quot;zone&quot;: &quot;Etc/UTC&quot;
+  },
+  &quot;tool_version&quot;: &quot;0.1.0a1&quot;
+}</pre></details><p>Canonical digest: 946cfebc3f6054c628c0a606124c8e11d2a36a5b7c5920cb80613c34af69ce2a</p></body></html>

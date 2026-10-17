@@ -1,0 +1,154 @@
+{
+  "canonical_digest": "0006bd499edc3885effab5235b60688a32eb98b4e865d2c5205e13fc769ceb79",
+  "coverage": {
+    "end_date": "2026-12-31",
+    "origin": "publisher",
+    "sources": [
+      {
+        "byte_end": 194,
+        "byte_start": 111,
+        "data_ordinal": 1,
+        "logical_key": [
+          "1"
+        ],
+        "member_path": "feed_info.txt",
+        "member_sha256": "3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914",
+        "physical_lf_line": 2,
+        "record_kind": "data",
+        "side": "inspect"
+      }
+    ],
+    "start_date": "2026-01-01"
+  },
+  "diagnostics": [],
+  "exit_code": 0,
+  "feed": {
+    "archive_sha256": "9da0bc6153149c3727cd77f31515a1697ef96411a466cf8e19c6d0aa2549c3f1",
+    "capability_inventory": {
+      "agency.txt": {
+        "columns": [
+          "agency_id",
+          "agency_name",
+          "agency_url",
+          "agency_timezone"
+        ],
+        "disposition": "modeled_and_metadata",
+        "rows": 1
+      },
+      "calendar.txt": {
+        "columns": [
+          "service_id",
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday",
+          "saturday",
+          "sunday",
+          "start_date",
+          "end_date"
+        ],
+        "disposition": "modeled_and_metadata",
+        "rows": 1
+      },
+      "feed_info.txt": {
+        "columns": [
+          "feed_publisher_name",
+          "feed_publisher_url",
+          "feed_lang",
+          "feed_start_date",
+          "feed_end_date",
+          "feed_version",
+          "feed_contact_email"
+        ],
+        "disposition": "modeled_and_metadata",
+        "rows": 1
+      },
+      "routes.txt": {
+        "columns": [
+          "route_id",
+          "agency_id",
+          "route_short_name",
+          "route_type"
+        ],
+        "disposition": "modeled_and_metadata",
+        "rows": 1
+      },
+      "stop_times.txt": {
+        "columns": [
+          "trip_id",
+          "arrival_time",
+          "departure_time",
+          "stop_id",
+          "stop_sequence"
+        ],
+        "disposition": "modeled_and_metadata",
+        "rows": 2
+      },
+      "stops.txt": {
+        "columns": [
+          "stop_id",
+          "stop_name",
+          "stop_lat",
+          "stop_lon"
+        ],
+        "disposition": "modeled_and_metadata",
+        "rows": 2
+      },
+      "trips.txt": {
+        "columns": [
+          "route_id",
+          "service_id",
+          "trip_id"
+        ],
+        "disposition": "modeled_and_metadata",
+        "rows": 1
+      },
+      "versions": {
+        "registry": "trillium-reviewed-v1",
+        "registry_sha256": "eb767e9201f5bd3e14e45c6e7f301c38ed2ee81d9f4e5a60dd176304f58a98b5",
+        "schema": "scheduled-direct-v0.1",
+        "schema_sha256": "6f1d789dd77dc57c581fb0cedb325a52e6fed545734448c864acebace781324c"
+      }
+    },
+    "excluded_members": [],
+    "members": {
+      "agency.txt": "56af5d3202a99132d688fe9c2ba42abb3f747843ddea3f4885421be3b65a7f2d",
+      "calendar.txt": "6b103abf3809a2c1f4fb460db3c067ebf3c26c19223e2588d1af4ee86f112db3",
+      "feed_info.txt": "3c8219176f2680ee67a1b88022d5976a0059522785906bfb6e2550732a973914",
+      "routes.txt": "67cdf3ee3e1d93420cd4f967831213a1179d3f3d2e276b8d715c901a1f69f7d9",
+      "stop_times.txt": "d6ebee1de286d66b02f29b49d33da8120651d90c08747319d0c467b523fd58ef",
+      "stops.txt": "0591de55942cdb11b4e2c18230bccfc46e12f55df9b0562125696b77573c80bf",
+      "trips.txt": "a8fd672d7982454ae7b8c43d45a0984bd68aa2bf3fa16f37d5d90397494eb239"
+    }
+  },
+  "gtfs_reference_revision": "2026-04-27",
+  "limits": {
+    "archive_bytes": 134217728,
+    "cases": 100,
+    "expanded_events": 250000,
+    "field_bytes": 1048576,
+    "member_bytes": 134217728,
+    "members": 128,
+    "total_bytes": 536870912
+  },
+  "model": "scheduled-direct-v0",
+  "non_evaluated": [
+    "multi-leg journeys",
+    "transfers and holding",
+    "station access/pathways",
+    "accessibility routing",
+    "fares",
+    "realtime",
+    "cross-trip block continuations"
+  ],
+  "schema_version": "1",
+  "scope": "Single boarding only. Multi-leg journeys were not evaluated.",
+  "status": "supported",
+  "timezone": {
+    "data_sha256": "fddce1e648a1732ac29afd9a16151b2973cdf082e7ec0c690f7e42be6b598b93",
+    "package_version": "2026.5",
+    "zone": "Etc/UTC"
+  },
+  "tool_version": "0.1.0a1"
+}

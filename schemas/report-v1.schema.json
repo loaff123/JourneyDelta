@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:journeydelta:report:1",
+  "title": "JourneyDelta scheduled-direct-v0 comparison report",
+  "type": "object",
+  "required": ["schema_version", "model", "tool_version", "scope", "limits", "exit_code", "status", "canonical_digest", "cases", "diagnostics", "feeds", "diagnostic_evidence"],
+  "properties": {
+    "schema_version": {"const": "1"},
+    "model": {"const": "scheduled-direct-v0"},
+    "tool_version": {"type": "string"},
+    "scope": {"const": "Single boarding only. Multi-leg journeys were not evaluated."},
+    "exit_code": {"enum": [0, 1, 2, 3]},
+    "status": {"enum": ["evaluated", "evaluated_with_warnings", "blocked"]},
+    "canonical_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "limits": {"type": "object", "required": ["archive_bytes", "total_bytes", "member_bytes", "members", "field_bytes", "cases", "expanded_events"], "additionalProperties": {"type": "integer", "minimum": 1}},
+    "cases": {"type": "array", "items": {"type": "object", "required": ["id", "case", "status"], "properties": {"id": {"type": "string", "minLength": 1}, "status": {"enum": ["pass", "fail", "error"]}, "comparison": {"type": "object", "required": ["case", "before", "after", "classification", "assertions", "passed", "arrival_delta_seconds", "existing_deadline_violation"]}, "service_dates": {"type": "array", "items": {"type": "string", "format": "date"}}}, "allOf": [{"if": {"properties": {"status": {"const": "error"}}}, "then": {"required": ["diagnostics"]}, "else": {"required": ["comparison", "evidence", "display", "service_dates", "expanded_events"]}}]}},
+    "diagnostics": {"type": "array", "items": {"$ref": "#/$defs/diagnostic"}},
+    "feeds": {"type": "object"},
+    "diagnostic_evidence": {"type": "array"}
+  },
+  "$defs": {
+    "diagnostic": {"type": "object", "required": ["code", "severity", "message", "sources"], "properties": {"code": {"type": "string"}, "severity": {"enum": ["warning", "error"]}, "message": {"type": "string"}, "sources": {"type": "array", "items": {"$ref": "#/$defs/source"}}}, "additionalProperties": false},
+    "source": {"type": "object", "required": ["side", "member_path", "member_sha256", "record_kind", "logical_key", "data_ordinal", "physical_lf_line", "byte_start", "byte_end"], "properties": {"side": {"type": "string"}, "member_path": {"type": "string"}, "member_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "record_kind": {"enum": ["data", "header", "blank"]}, "logical_key": {"type": ["array", "null"], "items": {"type": "string"}}, "data_ordinal": {"type": ["integer", "null"], "minimum": 1}, "physical_lf_line": {"type": "integer", "minimum": 1}, "byte_start": {"type": "integer", "minimum": 0}, "byte_end": {"type": "integer", "minimum": 1}}, "additionalProperties": false}
+  }
+}

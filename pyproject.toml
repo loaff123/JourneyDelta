@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools==84.0.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "journeydelta"
+version = "0.1.0a1"
+description = "Offline single-boarding timetable contracts with exact GTFS evidence"
+requires-python = ">=3.11"
+dependencies = ["tzdata==2026.5"]
+[project.scripts]
+journeydelta = "journeydelta.cli:main"
+[tool.setuptools.package-data]
+journeydelta = ["data/*.json"]
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]
